@@ -64,7 +64,7 @@ button {
   align-items: center;
   gap: 8px;
   border-radius: 999px;
-  font-size: 12.5px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.3px;
 }
@@ -103,7 +103,6 @@ button {
 .cm-hero-actions,
 .cm-hero-features,
 .cm-countdown,
-.cm-tabs,
 .cm-benefits,
 .cm-faq-actions {
   display: flex;
@@ -188,10 +187,10 @@ button {
 .cm-server-promo-banner {
   position: absolute;
   z-index: 5;
-  top: 14px;
-  right: -34px;
-  min-width: 230px;
-  padding: 11px 16px 12px;
+  top: 8px;
+  right: -48px;
+  min-width: 280px;
+  padding: 14px 20px 15px;
   border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: 12px;
   background: linear-gradient(135deg, #ffcf4a 0%, #fb6a2d 100%);
@@ -207,15 +206,15 @@ button {
 }
 
 .cm-server-promo-banner strong {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.15;
   font-weight: 900;
   letter-spacing: 0.3px;
 }
 
 .cm-server-promo-banner span {
-  margin-top: 3px;
-  font-size: 9.5px;
+  margin-top: 4px;
+  font-size: 11px;
   line-height: 1.25;
   font-weight: 800;
   letter-spacing: 0.45px;
@@ -476,12 +475,14 @@ button {
 
 .cm-program-eyebrow {
   width: fit-content;
-  margin-bottom: 10px;
-  padding: 6px 12px;
+  max-width: 100%;
+  margin-bottom: 14px;
+  padding: 10px 16px;
   border-radius: 999px;
   background: #fff;
   color: #1b5fd6;
-  font-size: 12px;
+  font-size: 15px;
+  line-height: 1.25;
   font-weight: 900;
   letter-spacing: 0.4px;
   text-transform: uppercase;
@@ -855,6 +856,50 @@ button {
   font-size: 12.5px;
 }
 
+.cm-flash-notes {
+  grid-column: 1 / -1;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  background: rgba(9, 38, 105, 0.22);
+}
+
+.cm-flash-notes-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.cm-flash-notes-head strong {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.cm-flash-notes-head button {
+  flex: 0 0 auto;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+  padding: 0 0 3px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cm-flash-notes ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.cm-flash-notes li + li {
+  margin-top: 4px;
+}
+
 .cm-coupon {
   padding: 36px 40px;
   border: 1px solid #e6ecf5;
@@ -944,6 +989,111 @@ button {
   background: #fff;
 }
 
+.cm-coupon-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.cm-service-hub-button {
+  min-width: 176px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1b5fd6, #0a93ed);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(27, 95, 214, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cm-service-hub-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(27, 95, 214, 0.28);
+}
+
+.cm-zalo-section {
+  padding-top: 34px;
+  margin-bottom: 76px;
+}
+
+.cm-zalo-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 34px;
+  align-items: center;
+  padding: 34px 38px;
+  overflow: hidden;
+  border: 1px solid #d8e6fb;
+  border-radius: 20px;
+  background:
+    radial-gradient(520px 260px at 0% 0%, rgba(27, 95, 214, 0.18), transparent 64%),
+    linear-gradient(135deg, #f6f9ff 0%, #ffffff 58%, #edf5ff 100%);
+  box-shadow: 0 16px 42px rgba(20, 50, 110, 0.08);
+}
+
+.cm-zalo-content h2 {
+  max-width: 680px;
+  margin: 16px 0 12px;
+  color: #081b3f;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.cm-zalo-content p {
+  max-width: 620px;
+  margin: 0;
+  color: #5a6b86;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.cm-zalo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 22px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0a63ff, #0094ff);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 26px rgba(10, 99, 255, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cm-zalo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(10, 99, 255, 0.3);
+}
+
+.cm-zalo-qr-wrap {
+  justify-self: end;
+  width: min(100%, 300px);
+  padding: 12px;
+  border: 1px solid #dbe7f6;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(20, 50, 110, 0.12);
+}
+
+.cm-zalo-qr {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: 50% 45%;
+  border-radius: 16px;
+}
+
 .cm-code-large strong {
   flex: 1;
   text-align: left;
@@ -952,31 +1102,6 @@ button {
 .cm-copied {
   color: #1b5fd6;
   font-weight: 800;
-}
-
-.cm-tabs {
-  justify-content: center;
-  gap: 30px;
-  margin-top: 26px;
-  padding-top: 18px;
-  border-top: 1px solid #edf1f8;
-}
-
-.cm-tabs button {
-  padding: 6px 2px;
-  border: 0;
-  border-bottom: 2px solid transparent;
-  background: transparent;
-  color: #5a6b86;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.cm-tabs button.is-active {
-  border-color: #1b5fd6;
-  color: #1b5fd6;
-  font-weight: 900;
 }
 
 .cm-benefits {
@@ -1126,6 +1251,7 @@ button {
 .cm-faq-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 14px;
   margin-top: 30px;
 }
@@ -1140,13 +1266,14 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 15px 18px;
+  padding: 18px 20px;
   border: 0;
   background: transparent;
   color: #16233d;
   cursor: pointer;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.45;
   font-weight: 800;
 }
 
@@ -1157,10 +1284,79 @@ button {
 
 .cm-faq-item p {
   margin: 0;
-  padding: 0 18px 16px;
+  padding: 0 20px 20px;
   color: #5a6b86;
-  font-size: 13.5px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.cm-info-section {
+  padding-top: 0;
+  padding-bottom: 86px;
+}
+
+.cm-info-card {
+  padding: 38px 42px;
+  border: 1px solid #dce7f8;
+  border-radius: 20px;
+  background:
+    radial-gradient(520px 280px at 100% 0%, rgba(27, 95, 214, 0.12), transparent 64%),
+    #fff;
+  box-shadow: 0 16px 42px rgba(20, 50, 110, 0.07);
+}
+
+.cm-info-card h2 {
+  max-width: 860px;
+  margin: 16px 0 14px;
+  color: #081b3f;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.16;
+  font-weight: 900;
+}
+
+.cm-info-sapo,
+.cm-info-body p {
+  color: #4f617c;
+  font-size: 16px;
+  line-height: 1.78;
+}
+
+.cm-info-sapo {
+  max-width: 980px;
+  margin: 0;
+}
+
+.cm-info-body {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+  padding-top: 26px;
+  border-top: 1px solid #edf1f8;
+}
+
+.cm-info-body h3 {
+  margin: 0;
+  color: #10244a;
+  font-size: 21px;
+  line-height: 1.35;
+  font-weight: 900;
+}
+
+.cm-info-body p {
+  margin: 0 0 12px;
+}
+
+.cm-info-toggle {
+  margin-top: 24px;
+  padding: 12px 18px;
+  border: 1px solid #1b5fd6;
+  border-radius: 10px;
+  background: #1b5fd6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(27, 95, 214, 0.2);
 }
 
 @keyframes cmfloat {
@@ -1177,8 +1373,13 @@ button {
   .cm-hero-inner,
   .cm-flash,
   .cm-coupon-main,
-  .cm-program-intro {
+  .cm-program-intro,
+  .cm-zalo-card {
     grid-template-columns: 1fr;
+  }
+
+  .cm-zalo-qr-wrap {
+    justify-self: center;
   }
 
   .cm-program-icon {
@@ -1187,6 +1388,7 @@ button {
   }
 
   .cm-hero-visual {
+    margin-top: 28px;
     min-height: 280px;
   }
 
@@ -1205,31 +1407,75 @@ button {
   }
 
   .cm-hero-inner {
-    padding: 46px 0;
+    gap: 36px;
+    padding: 40px 0 34px;
+  }
+
+  .cm-hero h1 {
+    max-width: 340px;
+    margin: 16px 0 14px;
+    font-size: clamp(30px, 9vw, 40px);
+    line-height: 1.04;
+  }
+
+  .cm-hero-copy p {
+    max-width: 100%;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  .cm-hero-actions {
+    gap: 12px;
+    margin-bottom: 28px;
   }
 
   .cm-hero-actions a {
     width: 100%;
   }
 
+  .cm-hero-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px 14px;
+  }
+
+  .cm-hero-features div {
+    align-items: flex-start;
+    gap: 8px;
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .cm-hero-visual {
+    margin-top: 64px;
+    min-height: 285px;
+    place-items: end center;
+    overflow: visible;
+  }
+
   .cm-server-art {
-    width: 220px;
-    right: 20px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(250px, 76vw);
+    margin: 8px auto 0;
   }
 
   .cm-server-promo-banner {
-    top: 18px;
+    top: 76px;
     right: -14px;
-    min-width: 190px;
-    padding: 9px 12px 10px;
+    min-width: 220px;
+    padding: 10px 14px 11px;
   }
 
   .cm-server-promo-banner strong {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .cm-server-promo-banner span {
-    font-size: 8px;
+    font-size: 9.5px;
   }
 
   .cm-deal-grid,
@@ -1250,6 +1496,24 @@ button {
     border-radius: 12px;
   }
 
+  .cm-program-eyebrow {
+    border-radius: 14px;
+    font-size: 13.5px;
+  }
+
+  .cm-zalo-card {
+    padding: 26px 20px;
+    gap: 24px;
+  }
+
+  .cm-zalo-section {
+    margin-bottom: 56px;
+  }
+
+  .cm-zalo-qr-wrap {
+    max-width: 260px;
+  }
+
   .cm-program-countdown {
     width: 100%;
     justify-content: space-between;
@@ -1261,18 +1525,33 @@ button {
     justify-content: flex-end;
   }
 
-  .cm-tabs {
-    gap: 16px;
-    justify-content: flex-start;
-    overflow-x: auto;
-  }
-
-  .cm-tabs button {
-    white-space: nowrap;
+  .cm-coupon-actions {
+    grid-template-columns: 1fr;
   }
 
   .cm-code-large {
     font-size: 19px;
+  }
+
+  .cm-service-hub-button {
+    width: 100%;
+  }
+
+  .cm-info-section {
+    padding-bottom: 64px;
+  }
+
+  .cm-info-card {
+    padding: 28px 20px;
+  }
+
+  .cm-info-sapo,
+  .cm-info-body p {
+    font-size: 15px;
+  }
+
+  .cm-info-body h3 {
+    font-size: 18px;
   }
 }
 
@@ -1851,5 +2130,165 @@ button {
     max-height: calc(100vh - 64px);
     padding-right: 16px;
     padding-left: 16px;
+  }
+}
+
+/* InterData testimonial styles copied from interdata-vps */
+.id-section-title { font-size: 2.25rem; }
+
+.id-section-badge {
+  display: table;
+  margin: 0 auto 12px;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0068E8 0%, #0047B8 100%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  box-shadow: 0 6px 14px rgba(0, 83, 210, 0.2);
+}
+
+.id-testimonial-name { font-size: 15px !important; }
+.id-testimonial-company { font-size: 12px !important; }
+.id-testimonial-content {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 16px !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+.id-testimonial-content.is-expanded {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+@media (max-width: 600px) {
+  .id-testimonials-section {
+    padding: 48px 0 !important;
+  }
+
+  .id-testimonials-heading {
+    margin-bottom: 30px !important;
+    padding-inline: 20px !important;
+  }
+
+  .id-testimonials-heading .id-section-title {
+    font-size: 30px !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .id-testimonials-carousel {
+    position: relative;
+    display: block !important;
+    padding-inline: 34px !important;
+  }
+
+  .id-testimonials-viewport {
+    width: 100%;
+  }
+
+  .id-testimonials-arrow {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    transform: translateY(-50%);
+    box-shadow: 0 6px 18px rgba(0, 59, 154, 0.15) !important;
+  }
+
+  .id-testimonials-arrow.is-prev {
+    left: 8px;
+  }
+
+  .id-testimonials-arrow.is-next {
+    right: 8px;
+  }
+
+  .id-testimonial-card {
+    flex-direction: column !important;
+    height: 460px !important;
+    min-height: 460px !important;
+    border-radius: 14px !important;
+  }
+
+  .id-testimonial-card.is-expanded {
+    height: auto !important;
+  }
+
+  .id-testimonial-profile {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 86px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 8px;
+    padding: 16px 18px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #E9ECEF;
+  }
+
+  .id-testimonial-logo {
+    grid-row: 1 / 3;
+    width: 86px !important;
+    height: 58px;
+    padding: 8px !important;
+  }
+
+  .id-testimonial-logo img {
+    max-height: 36px !important;
+  }
+
+  .id-testimonial-stars {
+    grid-column: 2;
+    margin: 0 !important;
+  }
+
+  .id-testimonial-author {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 !important;
+  }
+
+  .id-testimonial-name {
+    font-size: 16px !important;
+  }
+
+  .id-testimonial-company {
+    font-size: 13px !important;
+  }
+
+  .id-testimonial-body {
+    min-height: 0;
+    padding: 22px 22px 24px !important;
+    overflow: visible !important;
+  }
+
+  .id-testimonial-body > span {
+    top: -1rem !important;
+    left: -0.4rem !important;
+    font-size: 11rem !important;
+  }
+
+  .id-testimonial-content {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    -webkit-line-clamp: 7;
+  }
+
+  .id-testimonial-toggle {
+    margin-top: 12px !important;
+    font-size: 15px !important;
+  }
+
+  .id-testimonials-dots {
+    margin-top: 18px !important;
   }
 }

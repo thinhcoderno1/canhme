@@ -1,9 +1,20 @@
+'use client'
+
+import { useState } from 'react'
+
 type CountdownValue = {
   d: string
   h: string
   m: string
   s: string
 }
+
+const flashSaleNotes = [
+  'Chương trình áp dụng khi Quý khách đăng ký chu kỳ 12 tháng.',
+  'Ưu tiên những khách hàng thanh toán nhanh và sớm nhất.',
+  'Các hóa đơn không được thanh toán sau 15 phút kể từ khi khởi tạo sẽ bị xóa.',
+  'Chương trình không áp dụng chung các gói dịch vụ đặc biệt, - Promo, - Special và các chương trình khuyến mãi khác.',
+]
 
 export default function FlashSale({
   countdown,
@@ -12,8 +23,10 @@ export default function FlashSale({
 }: {
   countdown: CountdownValue
   copied: string | null
-  onCopy: (code: string) => void
+  onCopy: (code: string, copiedKey?: string) => void
 }) {
+  const [isNotesOpen, setIsNotesOpen] = useState(false)
+
   return (
     <section className="cm-section">
       <div className="cm-flash">
@@ -36,17 +49,33 @@ export default function FlashSale({
         </div>
         <div className="cm-flash-code">
           <span>Mã VPS 80%</span>
-          <button onClick={() => onCopy('FLASHVPS80')} type="button">
-            FLASHVPS80 <b>⧉</b>
+          <button onClick={() => onCopy('XXXXXX', 'flash-vps')} type="button">
+            XXXXXX <b>⧉</b>
           </button>
-          {copied === 'FLASHVPS80' ? <small>✓ Đã sao chép</small> : null}
+          {copied === 'flash-vps' ? <small>✓ Đã sao chép</small> : null}
         </div>
         <div className="cm-flash-code">
           <span>Mã CLOUD 60%</span>
-          <button onClick={() => onCopy('FLASHCLOUD60')} type="button">
-            FLASHCLOUD60 <b>⧉</b>
+          <button onClick={() => onCopy('XXXXXX', 'flash-cloud')} type="button">
+            XXXXXX <b>⧉</b>
           </button>
-          {copied === 'FLASHCLOUD60' ? <small>✓ Đã sao chép</small> : null}
+          {copied === 'flash-cloud' ? <small>✓ Đã sao chép</small> : null}
+        </div>
+
+        <div className={`cm-flash-notes${isNotesOpen ? ' is-open' : ''}`}>
+          <div className="cm-flash-notes-head">
+            <strong>Lưu ý</strong>
+            <button type="button" onClick={() => setIsNotesOpen((current) => !current)}>
+              {isNotesOpen ? 'Thu gọn' : 'Xem chi tiết'}
+            </button>
+          </div>
+          {isNotesOpen ? (
+            <ul>
+              {flashSaleNotes.map((note) => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          ) : null}
         </div>
       </div>
     </section>

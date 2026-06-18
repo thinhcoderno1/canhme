@@ -5,6 +5,7 @@ export type Deal = {
   price: string
   period?: string
   featured?: boolean
+  href?: string
 }
 
 export type DealProgram = {
@@ -29,6 +30,20 @@ export type PressItem = {
   desc: string
 }
 
+export type PressArticle = {
+  href: string
+  thumb: string
+  partnerLogo: string
+  title: string
+}
+
+export type CustomerTestimonial = {
+  name: string
+  company: string
+  logo: string
+  content: string
+}
+
 export const deals: DealProgram[] = [
   {
     eyebrow: 'Cloud-Day by InterData 2026',
@@ -51,6 +66,7 @@ export const deals: DealProgram[] = [
           '2000GB băng thông',
         ],
         price: '2.666.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/cloud-day-by-interdata-2026/cloud-day-base',
       },
       {
         name: 'Cloud-Day - Pro',
@@ -66,6 +82,7 @@ export const deals: DealProgram[] = [
         ],
         price: '5.666.000đ',
         featured: true,
+        href: 'https://support.interdata.vn/index.php?rp=/store/cloud-day-by-interdata-2026/cloud-day-pro',
       },
       {
         name: 'Cloud-Day - Ultra',
@@ -80,6 +97,7 @@ export const deals: DealProgram[] = [
           '18000GB băng thông',
         ],
         price: '14.666.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/cloud-day-by-interdata-2026/cloud-day-ultra',
       },
     ],
   },
@@ -103,6 +121,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '988.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-base',
       },
       {
         name: 'AMD 7H Pro',
@@ -117,6 +136,7 @@ export const deals: DealProgram[] = [
         ],
         price: '2.688.000đ',
         featured: true,
+        href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-pro',
       },
       {
         name: 'AMD 7H Ultra',
@@ -130,6 +150,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '5.199.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-ultra',
       },
       {
         name: 'AMD 7H Turbo',
@@ -143,6 +164,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '9.998.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-turbo',
       },
     ],
   },
@@ -166,6 +188,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '699.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-starter',
       },
       {
         name: 'BD - Personal',
@@ -179,6 +202,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '1.456.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-personal',
       },
       {
         name: 'BD - Builder',
@@ -192,6 +216,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '2.999.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-builder',
       },
       {
         name: 'BD - Business',
@@ -206,6 +231,7 @@ export const deals: DealProgram[] = [
         ],
         price: '4.599.000đ',
         featured: true,
+        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-business',
       },
       {
         name: 'BD - Enterprise 1',
@@ -219,6 +245,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '6.336.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-enterprise-1',
       },
       {
         name: 'BD - Enterprise 2',
@@ -232,6 +259,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '13.456.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-enterprise-2',
       },
     ],
   },
@@ -256,6 +284,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '1.567.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/victory-month-2026/victory-amd-1',
       },
       {
         name: 'Victory AMD 2',
@@ -271,6 +300,7 @@ export const deals: DealProgram[] = [
         ],
         price: '2.888.000đ',
         featured: true,
+        href: 'https://support.interdata.vn/index.php?rp=/store/victory-month-2026/victory-amd-2',
       },
       {
         name: 'Victory AMD 3',
@@ -285,6 +315,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth',
         ],
         price: '4.666.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/victory-month-2026/victory-amd-3',
       },
     ],
   },
@@ -310,6 +341,7 @@ export const deals: DealProgram[] = [
         ],
         price: '299.000đ',
         period: '/3 tháng',
+        href: 'https://support.interdata.vn/index.php?rp=/store/best-value-plans-2026/best-value-plans-premium-base',
       },
       {
         name: 'Premium Pro',
@@ -325,6 +357,7 @@ export const deals: DealProgram[] = [
         ],
         price: '899.000đ',
         period: '/3 tháng',
+        href: 'https://support.interdata.vn/index.php?rp=/store/best-value-plans-2026/premium-pro-1',
       },
     ],
   },
@@ -348,6 +381,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth Monthly',
         ],
         price: '999.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-base',
       },
       {
         name: 'Premium Pro',
@@ -362,6 +396,7 @@ export const deals: DealProgram[] = [
         ],
         price: '2.599.000đ',
         featured: true,
+        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-pro',
       },
       {
         name: 'Premium Ultra',
@@ -375,6 +410,7 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth Monthly',
         ],
         price: '5.679.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-ultra',
       },
       {
         name: 'Premium Turbo',
@@ -388,13 +424,11 @@ export const deals: DealProgram[] = [
           'Unlimited Bandwidth Monthly',
         ],
         price: '11.899.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-turbo',
       },
     ],
   },
 ]
-
-export const vpsTabs = ['VPS Giá Rẻ', 'VPS AMD', 'VPS Intel', 'VPS NVMe', 'VPS Windows']
-export const cloudTabs = ['Cloud Standard', 'Cloud AMD', 'Cloud Premium', 'Cloud Business', 'Cloud GPU']
 
 export const testimonials: Testimonial[] = [
   {
@@ -435,6 +469,57 @@ export const testimonials: Testimonial[] = [
   },
 ]
 
+export const TESTIMONIALS: CustomerTestimonial[] = [
+  {
+    name: 'Lê Minh Hưng',
+    company: 'SEO Việt',
+    logo: '/logo-seoviet.png',
+    content: `Sau 1 thời gian trải nghiệm và đã sử dụng dịch vụ của InterData thì Hưng đánh giá chất lượng dịch vụ khá là tốt. Hưng cũng dùng dịch vụ rất nhiều bên ở Việt Nam rồi thì thấy dịch vụ không thua kém bất kể bên nào, nhiều khi còn nhỉnh hơn các bên. Hệ thống ổn định, đặc biệt giá thành tốt hơn so với các bên trên thị trường. Mong muốn của Hưng cũng như tất cả khách hàng là InterData sẽ duy trì sự ổn định bền vững ở hiện tại và tương lai.`,
+  },
+  {
+    name: 'Vĩnh Minh Đạo',
+    company: 'RealDev',
+    logo: '/logo-realdev.png',
+    content: `Với tư cách là đơn vị sử dụng trực tiếp và cung cấp dịch vụ website đến khách hàng toàn quốc, mình đã sử dụng dịch vụ của các đơn vị cung cấp VPS, Hosting, Dedicate từ trong nước đến nước ngoài. Sau khi sử dụng dịch vụ VPS tại InterData, mình rất ấn tượng với cấu hình chuẩn chỉnh và giá trị thực tế của dịch vụ. Mình đánh giá rất cao thái độ cầu thị của toàn thể công ty InterData và chất lượng sản phẩm dịch vụ.`,
+  },
+  {
+    name: 'Trịnh Bảo',
+    company: 'BALICO',
+    logo: '/balico.png',
+    content: `Mình thấy khá hài lòng với dịch vụ Cloud AMD của InterData. Website chạy ổn định, hiệu suất và các tính năng đều đáp ứng tốt nhu cầu của mình. Có lúc cũng gặp vài trục trặc nhỏ, nhưng đội ngũ kỹ thuật xử lý rất nhanh và nhiệt tình. Nhìn chung, dùng dịch vụ của InterData mình cảm thấy rất yên tâm.`,
+  },
+  {
+    name: 'Trường Phong',
+    company: 'Công ty TNHH Giải pháp Công nghệ Trường Phong',
+    logo: '/logo-themewpgiare-truongphong.png',
+    content: `Từ lúc chuyển qua dùng VPS của InterData, mình thấy website chạy mượt hơn hẳn, hiếm khi gặp lỗi. Đội ngũ hỗ trợ cũng rất chuyên nghiệp, lúc nào cần là phản hồi liền. Hiện tại thì mình hoàn toàn hài lòng với dịch vụ này.`,
+  },
+  {
+    name: 'Thắng Nguyễn',
+    company: 'UMIX Việt Nam',
+    logo: '/logo-umix-vietnam.png',
+    content: `Tôi đã chuyển website Umix sang chạy ở InterData, điều tôi hài lòng nhất chính là sự nhiệt tình của các nhân viên, hỗ trợ mọi vấn đề một cách nhanh chóng ngay cả lúc nửa đêm.`,
+  },
+  {
+    name: 'Trần Mạnh Hùng',
+    company: 'Digizone Việt Nam',
+    logo: '/logo-digizone-vietnam.png',
+    content: `Bên mình là Agency về thiết kế web và Ads nên rất chú trọng về tính ổn định, bảo mật của VPS, Hosting để đảm bảo chất lượng dịch vụ với khách hàng. Từ khi dùng dịch vụ của InterData thì mình thấy hạ tầng mạnh, cập nhật các dòng cấu hình server mới, tốc độ kết nối nhanh và đội ngũ hỗ trợ nhiệt tình. Mình tin tưởng vào chất lượng dịch vụ của InterData sẽ luôn đảm bảo ổn định và bảo mật cao.`,
+  },
+  {
+    name: 'Đặng Hải Triều',
+    company: 'Đồng Hồ Hải Triều',
+    logo: '/logo-donghohaitrieu.png',
+    content: `Chất lượng dịch vụ rất tốt! Đội ngũ hỗ trợ mau chóng, phối hợp nhịp nhàng để hỗ trợ mấy ca khó. Linh hoạt xử lý mấy tình huống ngoài phạm vi trách nhiệm luôn. Rất tuyệt vời.`,
+  },
+  {
+    name: 'Tạ Quốc Khánh',
+    company: 'Công ty Cổ phần Jobke',
+    logo: '/logo-jobkey.png',
+    content: `Đội ngũ hỗ trợ kỹ thuật nhiệt tình và nhanh chóng. Tôi sẽ giới thiệu thêm cho bạn bè và đối tác của mình về dịch vụ của InterData trong thời gian tới.`,
+  },
+]
+
 export const press: PressItem[] = [
   {
     tag: 'TECHMAG',
@@ -468,23 +553,92 @@ export const press: PressItem[] = [
   },
 ]
 
+export const PRESS: PressArticle[] = [
+  {
+    href: 'https://baoangiang.com.vn/vps-interdata-giai-phap-may-chu-ao-toi-uu-hieu-suat-va-chi-phi-a475417.html',
+    thumb: '/press/thumb-angiang.png',
+    partnerLogo: '/press/baoangiang.png',
+    title: 'VPS InterData: Giải pháp máy chủ ảo tối ưu hiệu suất và chi phí',
+  },
+  {
+    href: 'https://baohatinh.vn/thue-vps-tai-interdata-giai-phap-toi-uu-ha-tang-online-cho-doanh-nghiep-post304939.html',
+    thumb: '/press/Thumb-baohatinh.jpg',
+    partnerLogo: '/press/baohatinh.png',
+    title: 'Thuê VPS tại InterData: Giải pháp tối ưu hạ tầng online cho doanh nghiệp',
+  },
+  {
+    href: 'https://vnexpress.net/interdata-dua-giai-phap-viet-ra-thi-truong-quoc-te-4539197.html',
+    thumb: '/press/thumb-vnexpress.webp',
+    partnerLogo: '/press/vnexpress.png',
+    title: 'InterData đưa giải pháp Việt ra thị trường quốc tế',
+  },
+  {
+    href: 'https://thanhnien.vn/interdata-va-vnpt-hop-tac-chien-luoc-va-khai-thac-ha-tang-datacenter-185240701161300605.htm',
+    thumb: '/press/thumb-baothanhnien.webp',
+    partnerLogo: '/press/baothanhnien.webp',
+    title: 'InterData và VNPT hợp tác chiến lược và khai thác hạ tầng Datacenter',
+  },
+  {
+    href: 'https://cafef.vn/interdata-tang-mien-phi-luu-tru-web-nvme-dung-luong-6gb-toc-do-mang-1gbps-20230223134836995.chn',
+    thumb: '/press/thumb-cafef.png',
+    partnerLogo: '/press/cafef.png',
+    title: 'InterData tặng miễn phí lưu trữ web NVMe dung lượng 6GB, tốc độ mạng 1Gbps',
+  },
+  {
+    href: 'https://vtv.vn/cong-nghe/greencloud-hop-tac-cung-interdata-trien-khai-ha-tang-server-tai-viet-nam-20230411104845847.htm',
+    thumb: '/press/thumb-vtv.png',
+    partnerLogo: '/press/vtv.webp',
+    title: 'GreenCloud hợp tác cùng InterData triển khai hạ tầng Server tại Việt Nam',
+  },
+  {
+    href: 'https://dantri.com.vn/suc-manh-so/interdata-ra-mat-goi-cloud-server-network-port-10gbps-tai-viet-nam-20221123162831826.htm',
+    thumb: '/press/thumb-dantri.webp',
+    partnerLogo: '/press/dantri.webp',
+    title: 'InterData ra mắt gói Cloud Server Network Port 10Gbps tại Việt Nam',
+  },
+  {
+    href: 'https://www.24h.com.vn/doanh-nghiep/interdata-va-eztech-ky-ket-thoa-thuan-hop-tac-chien-luoc-cung-cap-giai-phap-ha-tang-datacenter-c849a1569291.html',
+    thumb: '/press/thumb-24h.jpg',
+    partnerLogo: '/press/24h.png',
+    title: 'InterData và EZTech ký kết thỏa thuận hợp tác chiến lược cung cấp giải pháp hạ tầng Datacenter',
+  },
+  {
+    href: 'https://vietnamnet.vn/interdata-hop-tac-vnpt-khai-thac-ha-tang-datacenter-va-cac-dich-vu-the-manh-2301215.html',
+    thumb: '/press/thumb-vietnamnet.jpg',
+    partnerLogo: '/press/Logo_Vietnamnet.png',
+    title: 'InterData hợp tác VNPT khai thác hạ tầng Datacenter và các dịch vụ thế mạnh',
+  },
+  {
+    href: 'https://baolamdong.vn/thong-tin-can-biet/202405/le-ky-ket-mou-giua-interdata-va-truong-dai-hoc-yersin-da-lat-b180e1a/',
+    thumb: '/press/thumb-lamdong.jpg',
+    partnerLogo: '/press/lamdong.png',
+    title: 'Lễ ký kết MOU giữa InterData và Trường Đại học Yersin Đà Lạt',
+  },
+  {
+    href: 'https://vtcnews.vn/interdata-hop-tac-cung-eztech-phat-trien-ha-tang-server-cloud-gpu-ar872150.html',
+    thumb: '/press/thumb-vtc.webp',
+    partnerLogo: '/press/vtcnews.webp',
+    title: 'InterData hợp tác cùng EZTech phát triển hạ tầng server cloud GPU',
+  },
+]
+
 export const faqs = [
-  ['VPS là gì?', 'VPS là máy chủ ảo có tài nguyên riêng như CPU, RAM, ổ cứng và cho phép toàn quyền quản trị như một máy chủ độc lập.'],
-  ['Cloud Server khác gì VPS?', 'Cloud Server chạy trên cụm hạ tầng ảo hóa, thường linh hoạt hơn khi cần mở rộng tài nguyên và tăng độ sẵn sàng.'],
-  ['Khi nào nên dùng VPS thay vì Shared Hosting?', 'Khi website cần tài nguyên ổn định, quyền cấu hình riêng hoặc lưu lượng tăng cao mà Shared Hosting không còn đáp ứng tốt.'],
-  ['Cloud Server phù hợp với ai?', 'Phù hợp với doanh nghiệp, website thương mại, ứng dụng có lưu lượng biến động hoặc hệ thống cần mở rộng nhanh.'],
-  ['InterData có hỗ trợ cài đặt ban đầu không?', 'Có. Đội kỹ thuật có thể hỗ trợ cài đặt và cấu hình ban đầu để khách hàng vận hành nhanh hơn.'],
-  ['Có được toàn quyền quản trị máy chủ không?', 'Có. Khách hàng nhận quyền root hoặc Administrator để chủ động cài đặt và cấu hình theo nhu cầu.'],
-  ['Có thể nâng cấp cấu hình sau này không?', 'Có. Người dùng có thể nâng cấp CPU, RAM hoặc dung lượng theo nhu cầu sử dụng thực tế.'],
-  ['Dữ liệu có được sao lưu không?', 'Các gói dịch vụ có thể hỗ trợ backup hoặc snapshot tùy chính sách áp dụng tại thời điểm đăng ký.'],
-  ['Có hỗ trợ hệ điều hành nào?', 'InterData hỗ trợ nhiều hệ điều hành phổ biến như Ubuntu, Debian, AlmaLinux và Windows Server.'],
-  ['Thời gian kích hoạt dịch vụ là bao lâu?', 'Phần lớn dịch vụ được kích hoạt nhanh sau khi thanh toán, tùy loại dịch vụ và cấu hình đăng ký.'],
-  ['InterData có hỗ trợ chống DDoS không?', 'Hạ tầng InterData có trang bị giải pháp Anti-DDoS nhằm giảm rủi ro gián đoạn dịch vụ.'],
-  ['Có thể dùng để chạy WordPress không?', 'Có. VPS và Cloud Server đều phù hợp để chạy WordPress, WooCommerce và các CMS phổ biến khác.'],
-  ['Có hỗ trợ kỹ thuật 24/7 không?', 'Có. InterData hỗ trợ kỹ thuật 24/7 qua các kênh chăm sóc khách hàng chính thức.'],
-  ['Thanh toán theo tháng hay theo năm?', 'Khách hàng có thể chọn chu kỳ thanh toán phù hợp. Các gói trả dài hạn thường có ưu đãi tốt hơn.'],
-  ['Làm sao chọn cấu hình phù hợp?', 'Nên dựa trên lượng truy cập, loại ứng dụng, mức RAM/CPU cần dùng và ngân sách. Có thể liên hệ tư vấn để được gợi ý cụ thể.'],
-  ['Có hoàn tiền nếu dịch vụ không phù hợp không?', 'Chính sách hoàn tiền phụ thuộc điều kiện áp dụng của từng chương trình, nên kiểm tra kỹ trước khi đăng ký.'],
+  ['VPS là gì?', 'VPS là máy chủ ảo được chia tài nguyên riêng từ một máy chủ vật lý. Người dùng có CPU, RAM, ổ cứng và hệ điều hành riêng, có thể cài đặt website, ứng dụng, database hoặc phần mềm theo nhu cầu.'],
+  ['Cloud Server là gì?', 'Cloud Server là máy chủ ảo chạy trên nền tảng điện toán đám mây. Dịch vụ này phù hợp khi bạn cần hạ tầng ổn định, dễ mở rộng tài nguyên và hạn chế rủi ro phụ thuộc vào một máy chủ đơn lẻ.'],
+  ['VPS và Cloud Server khác nhau như thế nào?', 'VPS thường phù hợp với nhu cầu cố định và chi phí tối ưu. Cloud Server phù hợp hơn khi hệ thống cần mở rộng linh hoạt, vận hành ổn định hơn và có yêu cầu cao về khả năng sẵn sàng.'],
+  ['Nên thuê VPS hay Cloud Server cho website doanh nghiệp?', 'Nếu website có lưu lượng vừa phải, cấu hình ổn định và cần tiết kiệm chi phí, VPS là lựa chọn hợp lý. Nếu website bán hàng, hệ thống nội bộ hoặc ứng dụng có lượng truy cập biến động, Cloud Server sẽ phù hợp hơn.'],
+  ['Thuê VPS cần quan tâm thông số nào nhất?', 'Nên xem trước CPU, RAM, dung lượng SSD/NVMe, băng thông, Network Port, vị trí máy chủ, hệ điều hành hỗ trợ và chính sách backup. Với website nhiều truy cập, RAM, tốc độ ổ cứng và Network Port là các yếu tố rất quan trọng.'],
+  ['Bao nhiêu RAM là đủ để chạy website WordPress?', 'Website WordPress cơ bản có thể bắt đầu từ 2GB RAM. Website có WooCommerce, nhiều plugin hoặc lượng truy cập cao nên dùng từ 4GB RAM trở lên để giảm lỗi quá tải và cải thiện tốc độ phản hồi.'],
+  ['Network Port ảnh hưởng gì đến tốc độ VPS?', 'Network Port là giới hạn tốc độ kết nối mạng của máy chủ. Port cao giúp truyền dữ liệu tốt hơn khi website có nhiều người truy cập, tải file lớn hoặc chạy ứng dụng cần băng thông ổn định.'],
+  ['Ổ cứng NVMe khác gì SSD thông thường?', 'NVMe có tốc độ đọc ghi và độ trễ tốt hơn SSD SATA thông thường. Với website, database hoặc ứng dụng cần xử lý nhiều truy vấn, NVMe giúp giảm thời gian tải và cải thiện hiệu năng tổng thể.'],
+  ['VPS có dùng được cho website nhiều traffic không?', 'Có, nhưng cần chọn đúng cấu hình. Website nhiều traffic nên ưu tiên CPU mạnh, RAM đủ lớn, ổ NVMe, Network Port cao và có cấu hình cache phù hợp để tránh nghẽn tài nguyên vào giờ cao điểm.'],
+  ['Có được toàn quyền quản trị VPS hoặc Cloud Server không?', 'Có. Khách hàng thường được cấp quyền root với Linux hoặc Administrator với Windows để chủ động cài đặt phần mềm, cấu hình bảo mật, quản lý dữ liệu và triển khai ứng dụng.'],
+  ['InterData hỗ trợ những hệ điều hành nào?', 'InterData hỗ trợ các hệ điều hành phổ biến như Ubuntu, Debian, AlmaLinux, CentOS/Rocky Linux tùy thời điểm, cùng Windows Server cho những nhu cầu cần môi trường Windows.'],
+  ['Sau khi thanh toán bao lâu thì dịch vụ được kích hoạt?', 'Thông thường dịch vụ được kích hoạt sau khi hệ thống ghi nhận thanh toán thành công. Một số cấu hình đặc biệt hoặc chương trình ưu đãi có thể cần thêm thời gian kiểm tra trước khi bàn giao.'],
+  ['Có thể nâng cấp CPU, RAM hoặc dung lượng sau này không?', 'Có. Khi nhu cầu tăng, khách hàng có thể nâng cấp tài nguyên theo chính sách của từng dòng dịch vụ. Nên trao đổi trước với kỹ thuật nếu hệ thống đang chạy production để hạn chế gián đoạn.'],
+  ['Dữ liệu trên VPS có được sao lưu tự động không?', 'Backup phụ thuộc vào gói dịch vụ và cấu hình khách hàng chọn. Với dữ liệu quan trọng, nên chủ động thiết lập backup định kỳ, lưu bản sao ngoài máy chủ chính và kiểm tra khả năng khôi phục.'],
+  ['InterData có hỗ trợ kỹ thuật 24/7 không?', 'Có. InterData hỗ trợ kỹ thuật 24/7 qua các kênh chăm sóc khách hàng chính thức. Đội kỹ thuật có thể hỗ trợ các vấn đề liên quan đến hạ tầng, kết nối, vận hành và xử lý sự cố dịch vụ.'],
+  ['Làm sao chọn được gói VPS hoặc Cloud Server phù hợp?', 'Hãy bắt đầu từ nhu cầu thực tế: loại website hoặc ứng dụng, lượng truy cập, dung lượng dữ liệu, phần mềm cần chạy, ngân sách và mức độ quan trọng của uptime. Nếu chưa chắc cấu hình, nên chọn gói vừa đủ và giữ khả năng nâng cấp.'],
 ] as const
 
 export const FOOTER_SERVICES = [

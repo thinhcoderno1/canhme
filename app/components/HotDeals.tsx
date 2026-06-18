@@ -121,7 +121,9 @@ function DealCard({
           {deal.price}
           <span>{deal.period ?? '/năm'}</span>
         </div>
-        <a href="https://interdata.vn/lien-he/">Đăng ký ngay</a>
+        <a href={deal.href ?? 'https://interdata.vn/lien-he/'} target="_blank" rel="noopener noreferrer">
+          Đăng ký ngay
+        </a>
       </div>
     </article>
   )
@@ -142,7 +144,7 @@ export default function HotDeals({ deals }: { deals: DealProgram[] }) {
   return (
     <section className="cm-section cm-hotdeals" id="hotdeals">
       <div className="cm-section-heading">
-        <div className="cm-pill">⚡ Tối ưu chi phí đến 81%</div>
+        <div className="cm-pill">Tối ưu chi phí đến 81%</div>
         <h2>HOT DEALS</h2>
         <p>Các chương trình ưu đãi VPS và Cloud Server nổi bật, tối ưu chi phí cho từng nhu cầu triển khai.</p>
       </div>
