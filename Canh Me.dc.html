@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #F3F6FB; font-family: 'Be Vietnam Pro', system-ui, sans-serif; color: #16233D; -webkit-font-smoothing: antialiased; }
+  @keyframes cmpulse { 0%,100% { transform: scale(1); opacity:.55 } 50% { transform: scale(1.12); opacity:.9 } }
+  @keyframes cmfloat { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+  @keyframes cmflash { 0%,100% { opacity:1 } 50% { opacity:.5 } }
+</style>
+</helmet>
+
+<div style="overflow:hidden;">
+
+<!-- ===================== HERO ===================== -->
+<section style="position:relative; background:radial-gradient(900px 520px at 80% 12%, rgba(125,184,255,.55), transparent 60%), radial-gradient(620px 620px at 98% 95%, rgba(58,120,232,.55), transparent 60%), linear-gradient(135deg,#0b389c 0%,#1657d6 58%,#2a76ec 100%); color:#fff; overflow:hidden;">
+  <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px); background-size:30px 30px; opacity:.5;"></div>
+  <div style="position:relative; max-width:1180px; margin:0 auto; padding:64px 20px 58px; display:grid; grid-template-columns:1.05fr .95fr; gap:40px; align-items:center;">
+    <div>
+      <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); color:#fff; font-weight:700; font-size:12.5px; letter-spacing:.4px; padding:7px 14px; border-radius:999px; text-transform:uppercase;">
+        <span style="width:7px;height:7px;border-radius:50%;background:#FFC24B;box-shadow:0 0 0 4px rgba(255,194,75,.3);"></span>Tiết kiệm đến 81%
+      </div>
+      <h1 style="font-size:46px; line-height:1.08; font-weight:900; margin:18px 0 16px; letter-spacing:-.5px; text-transform:uppercase;">Canh Me – Khuyến Mãi<br>VPS &amp; Cloud Server</h1>
+      <p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,.86); max-width:480px; margin:0 0 28px;">Đừng bỏ lỡ cơ hội săn ưu đãi hấp dẫn cho VPS và Cloud Server tại InterData. Chúng tôi liên tục cập nhật các gói cấu hình tối ưu, mã giảm giá và flash sale giới hạn thời gian — giúp doanh nghiệp, developer và cá nhân tiết kiệm chi phí nhưng vẫn đảm bảo hiệu năng mạnh mẽ, hạ tầng ổn định và hỗ trợ kỹ thuật tận tâm 24/7.</p>
+      <div style="display:flex; gap:14px; margin-bottom:34px;">
+        <a href="#hotdeals" style="display:inline-flex; align-items:center; justify-content:center; background:#fff; color:#1657d6; font-weight:800; font-size:14px; padding:14px 28px; border-radius:10px; text-decoration:none; box-shadow:0 10px 26px rgba(4,20,60,.28); letter-spacing:.3px;">HOT DEALS</a>
+        <a href="#" style="display:inline-flex; align-items:center; justify-content:center; background:transparent; color:#fff; font-weight:700; font-size:14px; padding:14px 26px; border-radius:10px; text-decoration:none; border:1.5px solid rgba(255,255,255,.55); letter-spacing:.3px;">LIÊN HỆ TƯ VẤN</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:26px;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="display:flex; width:34px;height:34px; border-radius:9px; background:rgba(255,255,255,.16); align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 9.5C8 19.4 5 15.4 5 11V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div style="font-size:13px; line-height:1.3; font-weight:600;">Anti DDoS</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="display:flex; width:34px;height:34px; border-radius:9px; background:rgba(255,255,255,.16); align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><path d="M3 17l5-5 3 3 7-7"/><path d="M16 8h5v5"/></svg></span>
+          <div style="font-size:13px; line-height:1.3; font-weight:600;">Uptime cao<br><span style="font-weight:400; color:rgba(255,255,255,.78);">99.99%</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="display:flex; width:34px;height:34px; border-radius:9px; background:rgba(255,255,255,.16); align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 2zM20 13v3a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2z"/></svg></span>
+          <div style="font-size:13px; line-height:1.3; font-weight:600;">Hỗ trợ 24/7<br><span style="font-weight:400; color:rgba(255,255,255,.78);">siêu nhanh</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="display:flex; width:34px;height:34px; border-radius:9px; background:rgba(255,255,255,.16); align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><path d="M12 21s7-5.2 7-11a7 7 0 0 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div style="font-size:13px; line-height:1.3; font-weight:600;">Hạ tầng tại<br><span style="font-weight:400; color:rgba(255,255,255,.78);">Việt Nam</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- illustration (simple shapes placeholder) -->
+    <div style="position:relative; height:340px; display:flex; align-items:center; justify-content:center;">
+      <div style="position:absolute; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(150,200,255,.55), transparent 65%); animation:cmpulse 5s ease-in-out infinite;"></div>
+      <div style="position:relative; animation:cmfloat 6s ease-in-out infinite;">
+        <!-- cloud -->
+        <div style="position:absolute; left:78px; top:-18px; z-index:3;">
+          <div style="position:relative; width:210px; height:96px;">
+            <div style="position:absolute; left:18px; bottom:0; width:80px; height:80px; border-radius:50%; background:#eaf2ff;"></div>
+            <div style="position:absolute; left:62px; bottom:8px; width:110px; height:110px; border-radius:50%; background:#fff;"></div>
+            <div style="position:absolute; left:118px; bottom:0; width:78px; height:78px; border-radius:50%; background:#dbe9ff;"></div>
+            <div style="position:absolute; left:18px; bottom:0; width:178px; height:42px; border-radius:24px; background:#fff;"></div>
+            <svg style="position:absolute; left:96px; bottom:30px; z-index:4;" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1657d6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V8"/><path d="M7 12l5-5 5 5"/></svg>
+          </div>
+        </div>
+        <!-- server stack -->
+        <div style="position:relative; z-index:2; display:flex; flex-direction:column; gap:12px; padding-top:96px;">
+          <div style="width:300px; height:58px; border-radius:12px; background:linear-gradient(180deg,#ffffff,#e9f1ff); box-shadow:0 16px 30px rgba(5,25,70,.28); display:flex; align-items:center; padding:0 18px; gap:12px;">
+            <span style="width:9px;height:9px;border-radius:50%;background:#36d07a;"></span><span style="width:9px;height:9px;border-radius:50%;background:#36d07a;"></span>
+            <div style="flex:1; height:7px; border-radius:4px; background:#cdddf6;"></div>
+            <div style="width:30px; height:7px; border-radius:4px; background:#1657d6;"></div>
+          </div>
+          <div style="width:300px; height:58px; border-radius:12px; background:linear-gradient(180deg,#ffffff,#e9f1ff); box-shadow:0 16px 30px rgba(5,25,70,.28); display:flex; align-items:center; padding:0 18px; gap:12px;">
+            <span style="width:9px;height:9px;border-radius:50%;background:#36d07a;"></span><span style="width:9px;height:9px;border-radius:50%;background:#ffb43d;"></span>
+            <div style="flex:1; height:7px; border-radius:4px; background:#cdddf6;"></div>
+            <div style="width:30px; height:7px; border-radius:4px; background:#2a76ec;"></div>
+          </div>
+          <div style="width:300px; height:58px; border-radius:12px; background:linear-gradient(180deg,#ffffff,#e9f1ff); box-shadow:0 16px 30px rgba(5,25,70,.28); display:flex; align-items:center; padding:0 18px; gap:12px;">
+            <span style="width:9px;height:9px;border-radius:50%;background:#36d07a;"></span><span style="width:9px;height:9px;border-radius:50%;background:#36d07a;"></span>
+            <div style="flex:1; height:7px; border-radius:4px; background:#cdddf6;"></div>
+            <div style="width:30px; height:7px; border-radius:4px; background:#1657d6;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOT DEALS ===================== -->
+<section id="hotdeals" style="max-width:1180px; margin:0 auto; padding:68px 20px 10px; text-align:center;">
+  <div style="display:inline-flex; align-items:center; gap:7px; background:#EAF1FD; color:#1B5FD6; font-weight:700; font-size:12.5px; padding:7px 15px; border-radius:999px; letter-spacing:.3px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>Tối ưu chi phí đến 81%
+  </div>
+  <h2 style="font-size:38px; font-weight:900; letter-spacing:-.5px; margin:16px 0 12px;">HOT DEALS</h2>
+  <p style="font-size:15px; color:#5A6B86; max-width:620px; margin:0 auto;">Các gói VPS &amp; Cloud Server cấu hình tối ưu, giá ưu đãi cực tốt – Số lượng có hạn!</p>
+
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:40px; text-align:left; align-items:start;">
+    <!-- VPS Start -->
+    <div style="background:#fff; border:1px solid #E6ECF5; border-radius:18px; padding:30px 28px; box-shadow:0 10px 34px rgba(20,50,110,.05); margin-top:18px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="font-size:23px; font-weight:800; margin:0;">VPS Start</h3>
+        <span style="background:#FB6A2D; color:#fff; font-weight:800; font-size:13px; padding:4px 10px; border-radius:7px;">-70%</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:13px; margin:22px 0 24px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>2 vCPU</div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>4GB RAM</div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>40GB NVMe</div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>1TB BW</div>
+      </div>
+      <div style="font-size:14px; color:#9aa7bd; text-decoration:line-through; margin-bottom:2px;">1.290.000đ/năm</div>
+      <div style="font-size:30px; font-weight:900; color:#1B5FD6; margin-bottom:22px;">390.000đ<span style="font-size:15px; font-weight:600; color:#5A6B86;">/năm</span></div>
+      <a href="#" style="display:block; text-align:center; background:#1B5FD6; color:#fff; font-weight:800; font-size:14.5px; padding:13px; border-radius:10px; text-decoration:none;">Đăng ký ngay</a>
+    </div>
+
+    <!-- VPS Pro (featured) -->
+    <div style="background:#1B5FD6; border-radius:18px; box-shadow:0 22px 46px rgba(20,60,160,.30); color:#fff; overflow:hidden;">
+      <div style="background:#0E3FA6; text-align:center; font-weight:800; font-size:13px; letter-spacing:.4px; padding:10px;">★ BÁN CHẠY NHẤT ★</div>
+      <div style="padding:26px 28px 30px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="font-size:23px; font-weight:800; margin:0;">VPS Pro</h3>
+          <span style="background:#FB6A2D; color:#fff; font-weight:800; font-size:13px; padding:4px 10px; border-radius:7px;">-68%</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:13px; margin:22px 0 24px;">
+          <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#fff"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#1B5FD6" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>4 vCPU</div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#fff"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#1B5FD6" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>8GB RAM</div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#fff"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#1B5FD6" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>80GB NVMe</div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#fff"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#1B5FD6" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>2TB BW</div>
+        </div>
+        <div style="font-size:14px; color:rgba(255,255,255,.6); text-decoration:line-through; margin-bottom:2px;">2.490.000đ/năm</div>
+        <div style="font-size:30px; font-weight:900; color:#fff; margin-bottom:22px;">790.000đ<span style="font-size:15px; font-weight:600; color:rgba(255,255,255,.8);">/năm</span></div>
+        <a href="#" style="display:block; text-align:center; background:#fff; color:#1B5FD6; font-weight:800; font-size:14.5px; padding:13px; border-radius:10px; text-decoration:none;">Đăng ký ngay</a>
+      </div>
+    </div>
+
+    <!-- Cloud Turbo -->
+    <div style="background:#fff; border:1px solid #E6ECF5; border-radius:18px; padding:30px 28px; box-shadow:0 10px 34px rgba(20,50,110,.05); margin-top:18px;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="font-size:23px; font-weight:800; margin:0;">Cloud Turbo</h3>
+        <span style="background:#FB6A2D; color:#fff; font-weight:800; font-size:13px; padding:4px 10px; border-radius:7px;">-70%</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:13px; margin:22px 0 24px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>8 vCPU</div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>16GB RAM</div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>160GB NVMe</div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14.5px; font-weight:600;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#1B5FD6"/><path d="M8 12.4l2.6 2.6L16 9.2" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/></svg>3TB BW</div>
+      </div>
+      <div style="font-size:14px; color:#9aa7bd; text-decoration:line-through; margin-bottom:2px;">4.990.000đ/năm</div>
+      <div style="font-size:30px; font-weight:900; color:#1B5FD6; margin-bottom:22px;">1.490.000đ<span style="font-size:15px; font-weight:600; color:#5A6B86;">/năm</span></div>
+      <a href="#" style="display:block; text-align:center; background:#1B5FD6; color:#fff; font-weight:800; font-size:14.5px; padding:13px; border-radius:10px; text-decoration:none;">Đăng ký ngay</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FLASH SALE ===================== -->
+<section style="max-width:1180px; margin:0 auto; padding:46px 20px 10px;">
+  <div style="background:radial-gradient(700px 400px at 12% 10%, rgba(120,170,255,.4), transparent 60%), linear-gradient(120deg,#1453c9,#2b78ed); border-radius:20px; padding:34px 36px; color:#fff; display:grid; grid-template-columns:1.25fr 1fr 1fr; gap:30px; align-items:center; box-shadow:0 18px 44px rgba(20,60,160,.28);">
+    <div>
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+        <span style="display:flex; width:42px;height:42px; border-radius:11px; background:rgba(255,255,255,.18); align-items:center; justify-content:center; animation:cmflash 1.6s ease-in-out infinite;"><svg width="22" height="22" viewBox="0 0 24 24" fill="#FFC24B" stroke="#FFC24B" stroke-width="1"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></span>
+        <h3 style="font-size:27px; font-weight:900; margin:0; letter-spacing:.3px;">FLASH SALE</h3>
+      </div>
+      <div style="display:flex; gap:10px; margin-bottom:16px;">
+        <div style="background:#fff; color:#1453c9; border-radius:11px; width:62px; padding:10px 0; text-align:center;"><div style="font-size:24px; font-weight:900; line-height:1;">{{ cdD }}</div><div style="font-size:11px; font-weight:600; color:#5A6B86; margin-top:4px;">Ngày</div></div>
+        <div style="background:#fff; color:#1453c9; border-radius:11px; width:62px; padding:10px 0; text-align:center;"><div style="font-size:24px; font-weight:900; line-height:1;">{{ cdH }}</div><div style="font-size:11px; font-weight:600; color:#5A6B86; margin-top:4px;">Giờ</div></div>
+        <div style="background:#fff; color:#1453c9; border-radius:11px; width:62px; padding:10px 0; text-align:center;"><div style="font-size:24px; font-weight:900; line-height:1;">{{ cdM }}</div><div style="font-size:11px; font-weight:600; color:#5A6B86; margin-top:4px;">Phút</div></div>
+        <div style="background:#fff; color:#1453c9; border-radius:11px; width:62px; padding:10px 0; text-align:center;"><div style="font-size:24px; font-weight:900; line-height:1;">{{ cdS }}</div><div style="font-size:11px; font-weight:600; color:#5A6B86; margin-top:4px;">Giây</div></div>
+      </div>
+      <p style="font-size:13.5px; color:rgba(255,255,255,.86); margin:0; line-height:1.6;">Ưu đãi chỉ xuất hiện đôi khi và kết thúc rất nhanh. Đừng bỏ lỡ!</p>
+    </div>
+
+    <div style="background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); border-radius:14px; padding:20px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+        <span style="display:flex; width:32px;height:32px;border-radius:8px; background:rgba(255,255,255,.18); align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h0M7 16.5h0"/></svg></span>
+        <span style="font-weight:700; font-size:15px;">Mã VPS 80%</span>
+      </div>
+      <button onClick="{{ copyFlashVps }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; background:rgba(255,255,255,.95); color:#1453c9; border:1.5px dashed #9bb9ef; border-radius:10px; padding:11px 14px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; cursor:pointer; letter-spacing:.5px;">FLASHVPS80 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      <sc-if value="{{ copiedFlashVps }}" hint-placeholder-val="{{ false }}"><div style="font-size:12px; color:#cfe3ff; margin-top:8px;">✓ Đã sao chép mã!</div></sc-if>
+      <p style="font-size:12.5px; color:rgba(255,255,255,.8); margin:12px 0 0; line-height:1.5;">Áp dụng cho VPS – số lượng có hạn</p>
+    </div>
+
+    <div style="background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22); border-radius:14px; padding:20px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+        <span style="display:flex; width:32px;height:32px;border-radius:8px; background:rgba(255,255,255,.18); align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9"><path d="M6 16a4 4 0 0 1 .5-7.97A6 6 0 0 1 18 9a3.5 3.5 0 0 1 0 7H6z"/></svg></span>
+        <span style="font-weight:700; font-size:15px;">Mã CLOUD 60%</span>
+      </div>
+      <button onClick="{{ copyFlashCloud }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; background:rgba(255,255,255,.95); color:#1453c9; border:1.5px dashed #9bb9ef; border-radius:10px; padding:11px 14px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; cursor:pointer; letter-spacing:.5px;">FLASHCLOUD60 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+      <sc-if value="{{ copiedFlashCloud }}" hint-placeholder-val="{{ false }}"><div style="font-size:12px; color:#cfe3ff; margin-top:8px;">✓ Đã sao chép mã!</div></sc-if>
+      <p style="font-size:12.5px; color:rgba(255,255,255,.8); margin:12px 0 0; line-height:1.5;">Áp dụng cho Cloud Server – khung giờ đặc biệt</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VPS COUPON ===================== -->
+<section style="max-width:1180px; margin:0 auto; padding:44px 20px 0;">
+  <div style="background:#fff; border:1px solid #E6ECF5; border-radius:20px; padding:36px 40px; box-shadow:0 12px 38px rgba(20,50,110,.05);">
+    <div style="display:grid; grid-template-columns:200px 1fr; gap:38px; align-items:center;">
+      <div style="position:relative; height:170px; display:flex; align-items:center; justify-content:center;">
+        <div style="position:absolute; width:150px;height:150px;border-radius:50%; background:radial-gradient(circle, rgba(190,215,255,.7), transparent 66%);"></div>
+        <div style="position:relative; display:flex; flex-direction:column; gap:8px;">
+          <div style="width:120px;height:34px;border-radius:8px;background:linear-gradient(180deg,#fff,#e9f1ff);box-shadow:0 10px 20px rgba(5,25,70,.18);display:flex;align-items:center;padding:0 12px;gap:7px;"><span style="width:7px;height:7px;border-radius:50%;background:#36d07a;"></span><div style="flex:1;height:5px;border-radius:3px;background:#cdddf6;"></div></div>
+          <div style="width:120px;height:34px;border-radius:8px;background:linear-gradient(180deg,#fff,#e9f1ff);box-shadow:0 10px 20px rgba(5,25,70,.18);display:flex;align-items:center;padding:0 12px;gap:7px;"><span style="width:7px;height:7px;border-radius:50%;background:#36d07a;"></span><div style="flex:1;height:5px;border-radius:3px;background:#cdddf6;"></div></div>
+          <div style="width:120px;height:34px;border-radius:8px;background:linear-gradient(180deg,#fff,#e9f1ff);box-shadow:0 10px 20px rgba(5,25,70,.18);display:flex;align-items:center;padding:0 12px;gap:7px;"><span style="width:7px;height:7px;border-radius:50%;background:#36d07a;"></span><div style="flex:1;height:5px;border-radius:3px;background:#cdddf6;"></div></div>
+        </div>
+        <div style="position:absolute; right:18px; bottom:22px; width:54px;height:54px;border-radius:50%;background:#1B5FD6;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:22px;box-shadow:0 10px 22px rgba(20,60,160,.35);">%</div>
+      </div>
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:7px; background:#EAF1FD; color:#1B5FD6; font-weight:700; font-size:11.5px; padding:6px 13px; border-radius:999px; letter-spacing:.4px; text-transform:uppercase; margin-bottom:14px;">★ Ưu đãi đặc biệt</div>
+        <h3 style="font-size:27px; font-weight:800; margin:0 0 8px;">VPS giảm đến 50%</h3>
+        <p style="font-size:14.5px; color:#5A6B86; margin:0 0 18px;">Nhập mã bên dưới để nhận ưu đãi lên đến 50% cho các gói VPS.</p>
+        <button onClick="{{ copyVpsSave }}" style="width:100%; display:flex; align-items:center; gap:14px; background:#F4F8FF; border:1.6px dashed #9bb9ef; border-radius:12px; padding:16px 18px; cursor:pointer;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.7"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H5a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M9 7v10" stroke-dasharray="2 2"/></svg>
+          <span style="flex:1; text-align:left; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:24px; letter-spacing:1px; color:#1B5FD6;">VPSSAVE50</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        </button>
+        <sc-if value="{{ copiedVpsSave }}" hint-placeholder-val="{{ false }}"><div style="font-size:12.5px; color:#1B5FD6; font-weight:600; margin-top:8px;">✓ Đã sao chép mã VPSSAVE50!</div></sc-if>
+      </div>
+    </div>
+    <div style="border-top:1px solid #EDF1F8; margin-top:26px; padding-top:18px; display:flex; gap:30px; justify-content:center;">
+      <sc-for list="{{ vpsTabs }}" as="tab" hint-placeholder-count="5">
+        <button onClick="{{ tab.onClick }}" style="{{ tab.style }}">{{ tab.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:20px;">
+      <div style="display:flex; align-items:center; gap:9px; border:1px solid #E6ECF5; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><path d="M5 13l-2 6 6-2 9-9a2.8 2.8 0 0 0-4-4l-9 9z"/><path d="M13 7l4 4"/></svg>Kích hoạt nhanh</div>
+      <div style="display:flex; align-items:center; gap:9px; border:1px solid #E6ECF5; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.6h-4l-.3 2.6a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.6h4l.3-2.6a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5c.07-.33.1-.66.1-1z"/></svg>Toàn quyền quản trị</div>
+      <div style="display:flex; align-items:center; gap:9px; border:1px solid #E6ECF5; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 9.5C8 19.4 5 15.4 5 11V6l7-3z"/></svg>Ổn định</div>
+      <div style="display:flex; align-items:center; gap:9px; border:1px solid #E6ECF5; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Phù hợp website/app</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLOUD COUPON ===================== -->
+<section style="max-width:1180px; margin:0 auto; padding:32px 20px 0;">
+  <div style="background:linear-gradient(180deg,#EEF4FE,#F6F9FF); border:1px solid #DCE7F8; border-radius:20px; padding:36px 40px;">
+    <div style="display:grid; grid-template-columns:200px 1fr; gap:38px; align-items:center;">
+      <div style="position:relative; height:170px; display:flex; align-items:center; justify-content:center;">
+        <div style="position:absolute; width:150px;height:150px;border-radius:50%; background:radial-gradient(circle, rgba(160,195,255,.6), transparent 66%);"></div>
+        <div style="position:relative; width:150px; height:120px;">
+          <div style="position:absolute; left:14px; bottom:42px; width:54px;height:54px;border-radius:50%;background:#dbe9ff;"></div>
+          <div style="position:absolute; left:44px; bottom:50px; width:74px;height:74px;border-radius:50%;background:#fff;"></div>
+          <div style="position:absolute; left:84px; bottom:42px; width:52px;height:52px;border-radius:50%;background:#cfe1ff;"></div>
+          <div style="position:absolute; left:14px; bottom:42px; width:122px;height:30px;border-radius:18px;background:#fff;"></div>
+          <div style="position:absolute; left:30px; bottom:0; width:90px;height:30px;border-radius:7px;background:linear-gradient(180deg,#fff,#e3eeff);box-shadow:0 8px 18px rgba(5,25,70,.16);display:flex;align-items:center;padding:0 10px;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:#36d07a;"></span><div style="flex:1;height:4px;border-radius:3px;background:#cdddf6;"></div></div>
+        </div>
+      </div>
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:7px; background:#fff; color:#1B5FD6; border:1px solid #DCE7F8; font-weight:700; font-size:11.5px; padding:6px 13px; border-radius:999px; letter-spacing:.4px; text-transform:uppercase; margin-bottom:14px;">★ Ưu đãi đặc biệt</div>
+        <h3 style="font-size:27px; font-weight:800; margin:0 0 8px;">Cloud Server giảm đến 30%</h3>
+        <p style="font-size:14.5px; color:#5A6B86; margin:0 0 18px;">Nhập mã bên dưới để nhận ưu đãi lên đến 30% cho các gói Cloud Server.</p>
+        <button onClick="{{ copyCloud30 }}" style="width:100%; display:flex; align-items:center; gap:14px; background:#fff; border:1.6px dashed #9bb9ef; border-radius:12px; padding:16px 18px; cursor:pointer;">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.7"><path d="M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2 2 2 0 0 0 0 4 2 2 0 0 1-2 2H5a2 2 0 0 1-2-2 2 2 0 0 0 0-4z"/><path d="M9 7v10" stroke-dasharray="2 2"/></svg>
+          <span style="flex:1; text-align:left; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:24px; letter-spacing:1px; color:#1B5FD6;">CLOUD30</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        </button>
+        <sc-if value="{{ copiedCloud30 }}" hint-placeholder-val="{{ false }}"><div style="font-size:12.5px; color:#1B5FD6; font-weight:600; margin-top:8px;">✓ Đã sao chép mã CLOUD30!</div></sc-if>
+      </div>
+    </div>
+    <div style="border-top:1px solid #DCE7F8; margin-top:26px; padding-top:18px; display:flex; gap:30px; justify-content:center;">
+      <sc-for list="{{ cloudTabs }}" as="tab" hint-placeholder-count="5">
+        <button onClick="{{ tab.onClick }}" style="{{ tab.style }}">{{ tab.label }}</button>
+      </sc-for>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:20px;">
+      <div style="display:flex; align-items:center; gap:9px; background:#fff; border:1px solid #DCE7F8; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>Hiệu năng mạnh</div>
+      <div style="display:flex; align-items:center; gap:9px; background:#fff; border:1px solid #DCE7F8; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg>Mở rộng linh hoạt</div>
+      <div style="display:flex; align-items:center; gap:9px; background:#fff; border:1px solid #DCE7F8; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>Tài nguyên riêng</div>
+      <div style="display:flex; align-items:center; gap:9px; background:#fff; border:1px solid #DCE7F8; border-radius:11px; padding:13px 16px; font-size:13.5px; font-weight:600; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12.4l2.6 2.6L16 9.2"/></svg>Dễ triển khai</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section style="max-width:1180px; margin:0 auto; padding:64px 20px 0; text-align:center;">
+  <h2 style="font-size:30px; font-weight:800; margin:0 0 36px; display:flex; align-items:center; justify-content:center; gap:11px;">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Câu chuyện thành công
+  </h2>
+  <div style="position:relative;">
+    <button onClick="{{ tPrev }}" style="position:absolute; left:-8px; top:50%; transform:translateY(-50%); z-index:5; width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #E6ECF5;box-shadow:0 6px 18px rgba(20,50,110,.12); cursor:pointer; display:flex; align-items:center; justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button onClick="{{ tNext }}" style="position:absolute; right:-8px; top:50%; transform:translateY(-50%); z-index:5; width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #E6ECF5;box-shadow:0 6px 18px rgba(20,50,110,.12); cursor:pointer; display:flex; align-items:center; justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
+    <div style="overflow:hidden; margin:0 18px;">
+      <div style="{{ tTrackStyle }}">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="6">
+          <div style="flex:0 0 25%; padding:0 9px; box-sizing:border-box;">
+            <div style="background:#fff; border:1px solid #E6ECF5; border-radius:16px; padding:24px 22px; text-align:left; box-shadow:0 8px 26px rgba(20,50,110,.05); height:100%;">
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+                <div style="{{ t.avatarStyle }}">{{ t.initials }}</div>
+                <div style="min-width:0;"><div style="font-weight:700; font-size:14.5px; line-height:1.3;">{{ t.name }}</div><div style="font-size:12.5px; color:#8794a9; line-height:1.3;">{{ t.role }}</div></div>
+              </div>
+              <div style="display:flex; gap:2px; margin-bottom:12px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#FB6A2D"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.1l1.2-6.6L2.5 8.9 9.1 8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FB6A2D"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.1l1.2-6.6L2.5 8.9 9.1 8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FB6A2D"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.1l1.2-6.6L2.5 8.9 9.1 8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FB6A2D"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.1l1.2-6.6L2.5 8.9 9.1 8z"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#FB6A2D"><path d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.6L12 17.8 6.1 20.1l1.2-6.6L2.5 8.9 9.1 8z"/></svg>
+              </div>
+              <p style="font-size:13.5px; color:#5A6B86; line-height:1.65; margin:0;">“{{ t.quote }}”</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex; gap:7px; justify-content:center; margin-top:22px;">
+    <sc-for list="{{ tDots }}" as="d" hint-placeholder-count="3">
+      <button onClick="{{ d.onClick }}" style="{{ d.style }}"></button>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ===================== PRESS ===================== -->
+<section style="max-width:1180px; margin:0 auto; padding:54px 20px 0; text-align:center;">
+  <h2 style="font-size:30px; font-weight:800; margin:0 0 36px; display:flex; align-items:center; justify-content:center; gap:11px;">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="1.8"><path d="M4 5h13v14H6a2 2 0 0 1-2-2V5z"/><path d="M17 9h2a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2M8 9h5M8 13h5"/></svg>Báo chí nói gì về InterData?
+  </h2>
+  <div style="position:relative;">
+    <button onClick="{{ pPrev }}" style="position:absolute; left:-8px; top:50%; transform:translateY(-50%); z-index:5; width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #E6ECF5;box-shadow:0 6px 18px rgba(20,50,110,.12); cursor:pointer; display:flex; align-items:center; justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="2.2"><path d="M15 6l-6 6 6 6"/></svg></button>
+    <button onClick="{{ pNext }}" style="position:absolute; right:-8px; top:50%; transform:translateY(-50%); z-index:5; width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #E6ECF5;box-shadow:0 6px 18px rgba(20,50,110,.12); cursor:pointer; display:flex; align-items:center; justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1B5FD6" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></button>
+    <div style="overflow:hidden; margin:0 18px;">
+      <div style="{{ pTrackStyle }}">
+        <sc-for list="{{ press }}" as="p" hint-placeholder-count="6">
+          <div style="flex:0 0 25%; padding:0 9px; box-sizing:border-box;">
+            <div style="background:#fff; border:1px solid #E6ECF5; border-radius:16px; padding:22px 20px; text-align:left; box-shadow:0 8px 26px rgba(20,50,110,.05); height:100%;">
+              <span style="{{ p.tagStyle }}">{{ p.tag }}</span>
+              <h4 style="font-size:15.5px; font-weight:700; line-height:1.4; margin:0 0 10px;">{{ p.title }}</h4>
+              <p style="font-size:13px; color:#5A6B86; line-height:1.6; margin:0;">{{ p.desc }}</p>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex; gap:7px; justify-content:center; margin-top:22px;">
+    <sc-for list="{{ pDots }}" as="d" hint-placeholder-count="3">
+      <button onClick="{{ d.onClick }}" style="{{ d.style }}"></button>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section style="max-width:1180px; margin:0 auto; padding:60px 20px 80px; text-align:center;">
+  <div style="display:inline-flex; align-items:center; gap:7px; background:#EAF1FD; color:#1B5FD6; font-weight:700; font-size:12.5px; padding:7px 15px; border-radius:999px; margin-bottom:10px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 0 1 4.5 1.5c0 1.5-2 2-2 3M12 17h0"/></svg>FAQs
+  </div>
+  <div style="display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:30px;">
+    <h2 style="font-size:30px; font-weight:800; margin:0;">Một số câu hỏi thường gặp</h2>
+    <div style="display:flex; gap:8px;">
+      <button onClick="{{ collapseAll }}" style="background:#fff; border:1px solid #E6ECF5; color:#5A6B86; font-weight:600; font-size:12.5px; padding:8px 14px; border-radius:8px; cursor:pointer;">Thu gọn nội dung</button>
+      <button onClick="{{ expandAll }}" style="background:#1B5FD6; border:1px solid #1B5FD6; color:#fff; font-weight:600; font-size:12.5px; padding:8px 14px; border-radius:8px; cursor:pointer;">Xem chi tiết</button>
+    </div>
+  </div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; text-align:left;">
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <sc-for list="{{ faqLeft }}" as="f" hint-placeholder-count="8">
+        <div style="background:#fff; border:1px solid #E6ECF5; border-radius:12px; overflow:hidden;">
+          <button onClick="{{ f.onToggle }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; background:transparent; border:none; padding:15px 18px; cursor:pointer; text-align:left; font-size:14px; font-weight:600; color:#16233D;">
+            <span>{{ f.label }}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8794a9" stroke-width="2.2" style="{{ f.chevStyle }}"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div style="{{ f.answerStyle }}">{{ f.answer }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px;">
+      <sc-for list="{{ faqRight }}" as="f" hint-placeholder-count="8">
+        <div style="background:#fff; border:1px solid #E6ECF5; border-radius:12px; overflow:hidden;">
+          <button onClick="{{ f.onToggle }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; background:transparent; border:none; padding:15px 18px; cursor:pointer; text-align:left; font-size:14px; font-weight:600; color:#16233D;">
+            <span>{{ f.label }}</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8794a9" stroke-width="2.2" style="{{ f.chevStyle }}"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div style="{{ f.answerStyle }}">{{ f.answer }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    cd: { d: '01', h: '08', m: '24', s: '36' },
+    vpsTab: 0,
+    cloudTab: 0,
+    open: {},
+    tIndex: 0,
+    pIndex: 0,
+    copied: null,
+  };
+
+  vpsTabLabels = ['VPS Giá Rẻ', 'VPS AMD', 'VPS Intel', 'VPS NVMe', 'VPS Windows'];
+  cloudTabLabels = ['Cloud Standard', 'Cloud AMD', 'Cloud Premium', 'Cloud Business', 'Cloud GPU'];
+
+  testimonialsData = [
+    { name: 'Anh Minh', role: 'Developer', initials: 'AM', hue: 18, quote: 'Chuyển hệ thống lên VPS InterData giúp team triển khai app nhanh hơn, máy local nhẹ hơn rõ rệt.' },
+    { name: 'Chị Hương', role: 'Chủ shop online', initials: 'CH', hue: 330, quote: 'Website ổn định mùa cao điểm, hỗ trợ kỹ thuật phản hồi rất nhanh.' },
+    { name: 'Anh Nam', role: 'Agency', initials: 'AN', hue: 150, quote: 'Cloud Server chạy mượt, dễ mở rộng khi cần thêm tài nguyên cho dự án.' },
+    { name: 'Team Startup X', role: 'Startup', initials: 'SX', hue: 250, quote: 'Chi phí tối ưu nhưng vẫn có hiệu năng đủ mạnh để vận hành dịch vụ hàng ngày.' },
+    { name: 'Chị Lan', role: 'Marketing Lead', initials: 'CL', hue: 285, quote: 'Landing page tải nhanh hơn hẳn sau khi chuyển sang hạ tầng của InterData.' },
+    { name: 'Anh Quang', role: 'Sysadmin', initials: 'AQ', hue: 200, quote: 'Toàn quyền quản trị, snapshot và backup tiện lợi, đội kỹ thuật hỗ trợ 24/7 rất ổn.' },
+  ];
+
+  pressData = [
+    { tag: 'TECHMAG', tagBg: '#1B5FD6', title: 'InterData và bài toán tối ưu chi phí hạ tầng cho doanh nghiệp trẻ', desc: 'InterData giúp doanh nghiệp trẻ tối ưu chi phí với hạ tầng mạnh mẽ, linh hoạt và ổn định.' },
+    { tag: 'VIETDIGITAL', tagBg: '#16A34A', title: 'Giải pháp VPS, Cloud Server linh hoạt cho thời đại số', desc: 'Các giải pháp VPS và Cloud Server của InterData đáp ứng nhu cầu triển khai nhanh và mở rộng dễ dàng.' },
+    { tag: 'DEVCOMMUNITY', tagBg: '#7C3AED', title: 'InterData được nhiều developer lựa chọn nhờ hiệu năng và hỗ trợ tốt', desc: 'Hiệu năng ổn định, hạ tầng tại Việt Nam và hỗ trợ 24/7 là điểm cộng lớn của InterData.' },
+    { tag: 'BUSINESS INSIGHT', tagBg: '#EA580C', title: 'Xu hướng chuyển dịch lên hạ tầng cloud tại Việt Nam', desc: 'Nhiều doanh nghiệp Việt đang chuyển dịch lên cloud để tăng hiệu quả vận hành và tiết kiệm chi phí.' },
+    { tag: 'STARTUP NEWS', tagBg: '#0891B2', title: 'Hạ tầng giá tốt giúp startup tăng tốc sản phẩm', desc: 'Chi phí hợp lý và khả năng mở rộng linh hoạt giúp các startup rút ngắn thời gian ra mắt sản phẩm.' },
+    { tag: 'CLOUD TODAY', tagBg: '#DB2777', title: 'Anti-DDoS và uptime 99.99% — tiêu chuẩn mới cho VPS Việt', desc: 'InterData đầu tư mạnh vào bảo mật và độ ổn định, đáp ứng yêu cầu khắt khe của khách hàng.' },
+  ];
+
+  faqData = [
+    ['VPS là gì?', 'VPS (Virtual Private Server) là máy chủ ảo có tài nguyên riêng (CPU, RAM, ổ cứng), cho bạn toàn quyền quản trị như một máy chủ độc lập.'],
+    ['Cloud Server khác gì VPS?', 'Cloud Server chạy trên cụm hạ tầng ảo hóa, cho khả năng mở rộng tài nguyên linh hoạt và độ sẵn sàng cao hơn VPS truyền thống.'],
+    ['Khi nào nên dùng VPS thay vì Shared Hosting?', 'Khi website cần tài nguyên ổn định, toàn quyền cấu hình, hoặc lưu lượng tăng cao mà Shared Hosting không đáp ứng được.'],
+    ['Cloud Server phù hợp với ai?', 'Phù hợp với doanh nghiệp, ứng dụng có lưu lượng biến động, hệ thống cần mở rộng nhanh và độ ổn định cao.'],
+    ['InterData có hỗ trợ cài đặt ban đầu không?', 'Có. Đội kỹ thuật hỗ trợ cài đặt và cấu hình ban đầu, đảm bảo bạn vận hành nhanh chóng.'],
+    ['Có được toàn quyền quản trị máy chủ không?', 'Có. Bạn nhận quyền root/Administrator để toàn quyền cài đặt và cấu hình theo nhu cầu.'],
+    ['Có thể nâng cấp cấu hình sau này không?', 'Có. Bạn có thể nâng cấp CPU, RAM, dung lượng linh hoạt mà không cần cài đặt lại từ đầu.'],
+    ['Dữ liệu có được sao lưu không?', 'Có. Hệ thống hỗ trợ sao lưu và snapshot định kỳ giúp bảo vệ dữ liệu của bạn.'],
+    ['Có hỗ trợ hệ điều hành nào?', 'Hỗ trợ nhiều bản phân phối Linux (Ubuntu, CentOS, Debian...) và Windows Server.'],
+    ['Thời gian kích hoạt dịch vụ là bao lâu?', 'Phần lớn dịch vụ được kích hoạt tự động chỉ trong vài phút sau khi thanh toán.'],
+    ['InterData có hỗ trợ chống DDoS không?', 'Có. Hạ tầng được trang bị giải pháp Anti-DDoS giúp bảo vệ dịch vụ khỏi tấn công.'],
+    ['Có thể dùng để chạy website WordPress không?', 'Hoàn toàn được. VPS và Cloud Server rất phù hợp để chạy WordPress và các CMS khác.'],
+    ['Có hỗ trợ kỹ thuật 24/7 không?', 'Có. Đội ngũ kỹ thuật hỗ trợ 24/7 qua nhiều kênh, phản hồi nhanh chóng.'],
+    ['Thanh toán theo tháng hay theo năm?', 'Bạn có thể chọn thanh toán theo tháng hoặc theo năm, trả năm thường có ưu đãi tốt hơn.'],
+    ['Làm sao chọn cấu hình phù hợp?', 'Bạn có thể liên hệ tư vấn để được gợi ý cấu hình theo nhu cầu và ngân sách thực tế.'],
+    ['Có hoàn tiền nếu dịch vụ không phù hợp không?', 'Có chính sách hoàn tiền theo điều kiện áp dụng — vui lòng liên hệ để biết chi tiết.'],
+  ];
+
+  componentDidMount() {
+    this.target = Date.now() + ((1 * 86400) + (8 * 3600) + (24 * 60) + 36) * 1000;
+    this._iv = setInterval(() => this.tick(), 1000);
+  }
+  componentWillUnmount() { clearInterval(this._iv); clearTimeout(this._ct); }
+
+  tick() {
+    let diff = Math.max(0, Math.floor((this.target - Date.now()) / 1000));
+    const d = Math.floor(diff / 86400); diff -= d * 86400;
+    const h = Math.floor(diff / 3600); diff -= h * 3600;
+    const m = Math.floor(diff / 60); diff -= m * 60;
+    const p = (n) => String(n).padStart(2, '0');
+    this.setState({ cd: { d: p(d), h: p(h), m: p(m), s: p(diff) } });
+  }
+
+  copy(code) {
+    try { if (navigator.clipboard) navigator.clipboard.writeText(code); } catch (e) {}
+    this.setState({ copied: code });
+    clearTimeout(this._ct);
+    this._ct = setTimeout(() => this.setState({ copied: null }), 1800);
+  }
+
+  toggle(id) { this.setState((s) => ({ open: { ...s.open, [id]: !s.open[id] } })); }
+  expandAll() { const o = {}; this.faqData.forEach((_, i) => { o[i] = true; }); this.setState({ open: o }); }
+  collapseAll() { this.setState({ open: {} }); }
+
+  clamp(v, max) { return Math.max(0, Math.min(max, v)); }
+
+  buildFaq(globalIndex) {
+    const [label, answer] = this.faqData[globalIndex];
+    const isOpen = !!this.state.open[globalIndex];
+    return {
+      label, answer,
+      onToggle: () => this.toggle(globalIndex),
+      chevStyle: { transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform .2s' },
+      answerStyle: {
+        padding: '0 18px 16px', fontSize: '13.5px', color: '#5A6B86',
+        lineHeight: 1.65, display: isOpen ? 'block' : 'none',
+      },
+    };
+  }
+
+  renderVals() {
+    const { cd, vpsTab, cloudTab, tIndex, pIndex, copied } = this.state;
+    const tMax = this.testimonialsData.length - 4;
+    const pMax = this.pressData.length - 4;
+
+    const tabStyle = (active) => ({
+      background: 'transparent', border: 'none',
+      borderBottom: active ? '2px solid #1B5FD6' : '2px solid transparent',
+      color: active ? '#1B5FD6' : '#5A6B86',
+      fontWeight: active ? 700 : 500, fontSize: '14px', padding: '6px 2px', cursor: 'pointer',
+    });
+
+    const dotStyle = (active) => ({
+      width: active ? '22px' : '8px', height: '8px',
+      borderRadius: active ? '6px' : '50%',
+      background: active ? '#1B5FD6' : '#cdd7e6',
+      border: 'none', cursor: 'pointer', padding: 0, transition: '.25s',
+    });
+
+    return {
+      cdD: cd.d, cdH: cd.h, cdM: cd.m, cdS: cd.s,
+
+      copyFlashVps: () => this.copy('FLASHVPS80'),
+      copyFlashCloud: () => this.copy('FLASHCLOUD60'),
+      copyVpsSave: () => this.copy('VPSSAVE50'),
+      copyCloud30: () => this.copy('CLOUD30'),
+      copiedFlashVps: copied === 'FLASHVPS80',
+      copiedFlashCloud: copied === 'FLASHCLOUD60',
+      copiedVpsSave: copied === 'VPSSAVE50',
+      copiedCloud30: copied === 'CLOUD30',
+
+      vpsTabs: this.vpsTabLabels.map((label, i) => ({
+        label, style: tabStyle(i === vpsTab), onClick: () => this.setState({ vpsTab: i }),
+      })),
+      cloudTabs: this.cloudTabLabels.map((label, i) => ({
+        label, style: tabStyle(i === cloudTab), onClick: () => this.setState({ cloudTab: i }),
+      })),
+
+      testimonials: this.testimonialsData.map((t) => ({
+        ...t,
+        avatarStyle: {
+          width: '46px', height: '46px', borderRadius: '50%', display: 'flex',
+          alignItems: 'center', justifyContent: 'center', fontWeight: 800,
+          fontSize: '15px', color: '#fff', flex: '0 0 auto',
+          background: `linear-gradient(135deg, hsl(${t.hue} 70% 58%), hsl(${t.hue + 25} 72% 48%))`,
+        },
+      })),
+      tTrackStyle: { display: 'flex', transition: 'transform .45s cubic-bezier(.4,0,.2,1)', transform: `translateX(-${tIndex * 25}%)` },
+      tPrev: () => this.setState((s) => ({ tIndex: this.clamp(s.tIndex - 1, tMax) })),
+      tNext: () => this.setState((s) => ({ tIndex: this.clamp(s.tIndex + 1, tMax) })),
+      tDots: Array.from({ length: tMax + 1 }, (_, i) => ({
+        style: dotStyle(i === tIndex), onClick: () => this.setState({ tIndex: i }),
+      })),
+
+      press: this.pressData.map((p) => ({
+        ...p,
+        tagStyle: {
+          display: 'inline-block', fontSize: '11px', fontWeight: 800, letterSpacing: '.5px',
+          color: '#fff', padding: '4px 10px', borderRadius: '6px', marginBottom: '14px', background: p.tagBg,
+        },
+      })),
+      pTrackStyle: { display: 'flex', transition: 'transform .45s cubic-bezier(.4,0,.2,1)', transform: `translateX(-${pIndex * 25}%)` },
+      pPrev: () => this.setState((s) => ({ pIndex: this.clamp(s.pIndex - 1, pMax) })),
+      pNext: () => this.setState((s) => ({ pIndex: this.clamp(s.pIndex + 1, pMax) })),
+      pDots: Array.from({ length: pMax + 1 }, (_, i) => ({
+        style: dotStyle(i === pIndex), onClick: () => this.setState({ pIndex: i }),
+      })),
+
+      faqLeft: [0, 1, 2, 3, 4, 5, 6, 7].map((i) => this.buildFaq(i)),
+      faqRight: [8, 9, 10, 11, 12, 13, 14, 15].map((i) => this.buildFaq(i)),
+
+      expandAll: () => this.expandAll(),
+      collapseAll: () => this.collapseAll(),
+    };
+  }
+}
+</script>
+</body>
+</html>
