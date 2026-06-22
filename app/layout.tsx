@@ -77,7 +77,7 @@ const structuredData = {
       name: 'InterData',
       legalName: 'Công ty Cổ phần Inter Group',
       url: siteUrl,
-      logo: `${siteUrl}/interdata-logo.png`,
+      logo: `${siteUrl}/interdata-logo-white.png`,
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+84-1900-636-822',

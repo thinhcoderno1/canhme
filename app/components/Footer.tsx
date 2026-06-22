@@ -16,7 +16,7 @@ function FooterLink({ label, href }: { label: string; href: string }) {
           transition: 'color 0.2s',
           display: 'inline-block',
         }}
-        onMouseEnter={e => (e.currentTarget.style.color = '#FF9900')}
+        onMouseEnter={e => (e.currentTarget.style.color = '#7EDCFF')}
         onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.78)')}
       >
         {label}
@@ -46,7 +46,13 @@ function FooterColumn({ title, items }: { title: string; items: { label: string;
 
 export default function Footer() {
   return (
-    <footer style={{ background: 'linear-gradient(180deg, #003B9A 0%, #001A5E 100%)' }}>
+    <footer
+      className="id-footer"
+      style={{
+        background:
+          'radial-gradient(820px 380px at 14% 0%, rgba(0,166,255,0.14), transparent 62%), radial-gradient(760px 380px at 88% 0%, rgba(7,91,217,0.18), transparent 64%), linear-gradient(180deg, #061226 0%, #081d3d 58%, #061226 100%)',
+      }}
+    >
       <div className="id-footer-scroll">
         <div className="id-footer-grid" style={{
           maxWidth: 1200,
@@ -85,7 +91,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: 'rgba(255,255,255,0.78)', transition: 'color 0.2s' }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#FF9900')}
+              onMouseEnter={e => (e.currentTarget.style.color = '#7EDCFF')}
               onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.78)')}
             >
               211 Đường số 5, P. Bình Trưng, TP. Hồ Chí Minh
@@ -103,7 +109,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.12)' }}>
+      <div style={{ borderTop: '1px solid rgba(0,166,255,0.18)' }}>
         <div className="id-footer-copyright" style={{
           maxWidth: 1200,
           margin: '0 auto',

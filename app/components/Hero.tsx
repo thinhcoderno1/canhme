@@ -22,12 +22,12 @@ export default function Hero() {
           </p>
           <div className="cm-hero-actions">
             <a href="#hotdeals">HOT DEALS</a>
-            <a href="https://interdata.vn/lien-he/" className="is-secondary">
+            <a href="https://www.facebook.com/interdata.com.vn" className="is-secondary">
               LIÊN HỆ TƯ VẤN
             </a>
           </div>
           <div className="cm-hero-features">
-            {['Anti DDoS', 'Uptime cao 99.99%', 'Hỗ trợ 24/7', 'Hạ tầng tại Việt Nam'].map((item) => (
+            {['CPU AMD/Intel thế hệ mới', 'SSD NVMe U.2 Gen 4', 'Uptime 99.9%', 'Support 24/7'].map((item) => (
               <div key={item}>
                 <CheckIcon />
                 <span>{item}</span>

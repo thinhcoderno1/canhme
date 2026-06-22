@@ -15,6 +15,7 @@ export type DealProgram = {
   note: string
   deals: Deal[]
   iconVariant?: 'cloud' | 'vps'
+  hidden?: boolean
 }
 
 export type Testimonial = {
@@ -170,6 +171,7 @@ export const deals: DealProgram[] = [
   },
   {
     eyebrow: 'InterData Day - VPS AMD hiệu năng cao',
+    hidden: true,
     title: 'Hạ tầng mạnh mẽ - vận hành tự tin',
     description:
       'Tăng tốc website, app và hệ thống trực tuyến với giải pháp VPS AMD dùng CPU AMD 7H12 mạnh mẽ, SSD NVMe U.2 siêu tốc độ, cùng dung lượng băng thông không giới hạn. Cấu hình đa dạng từ cơ bản đến doanh nghiệp với mức chi phí tối ưu, phù hợp cho nhu cầu vận hành liên tục, xử lý đa tác vụ và mở rộng tài nguyên linh hoạt khi cần.',
@@ -265,6 +267,7 @@ export const deals: DealProgram[] = [
   },
   {
     eyebrow: 'Victory Month 2026 - VPS AMD hiệu năng cao',
+    hidden: true,
     title: 'Mừng lễ Độc Lập - ưu đãi tràn ngập',
     description:
       'Giải pháp VPS AMD với CPU AMD EPYC 7H12, SSD NVMe Gen4, băng thông không giới hạn. Hạ tầng ổn định, tốc độ cao, vận hành mượt mà các workload như web app, database, container hay automation. Gia hạn giữ nguyên giá, cân bằng tốt giữa chi phí và hiệu suất.',

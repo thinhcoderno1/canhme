@@ -16,17 +16,28 @@ function getEndOfMonthTime() {
 
 function useEndOfMonthCountdown() {
   const endOfMonth = useMemo(() => getEndOfMonthTime(), [])
-  const [left, setLeft] = useState(() => Math.max(0, endOfMonth - Date.now()))
+  const [left, setLeft] = useState<number | null>(null)
 
   useEffect(() => {
+    const updateLeft = () => setLeft(Math.max(0, endOfMonth - Date.now()))
+    updateLeft()
     const timer = window.setInterval(() => {
-      setLeft(Math.max(0, endOfMonth - Date.now()))
+      updateLeft()
     }, 1000)
 
     return () => window.clearInterval(timer)
   }, [endOfMonth])
 
   return useMemo(() => {
+    if (left === null) {
+      return {
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+      }
+    }
+
     let seconds = Math.floor(left / 1000)
     const days = Math.floor(seconds / 86400)
     seconds -= days * 86400
@@ -69,6 +80,8 @@ function ProgramCountdown({
     </div>
   )
 }
+
+const PROGRAM_URGENCY_NOTE = 'Có thể kết thúc sớm hơn dự kiến, do số lượng ưu đãi có hạn'
 
 function ProgramIcon({ variant = 'cloud' }: { variant?: DealProgram['iconVariant'] }) {
   return (
@@ -121,7 +134,7 @@ function DealCard({
           {deal.price}
           <span>{deal.period ?? '/năm'}</span>
         </div>
-        <a href={deal.href ?? 'https://interdata.vn/lien-he/'} target="_blank" rel="noopener noreferrer">
+        <a href={deal.href ?? 'https://www.facebook.com/interdata.com.vn'} target="_blank" rel="noopener noreferrer">
           Đăng ký ngay
         </a>
       </div>
@@ -131,54 +144,77 @@ function DealCard({
 
 export default function HotDeals({ deals }: { deals: DealProgram[] }) {
   const countdown = useEndOfMonthCountdown()
+  const visibleDeals = useMemo(() => deals.filter((program) => !program.hidden), [deals])
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>(() =>
     Object.fromEntries(
-      deals.flatMap((program) => program.deals.map((deal) => [`${program.eyebrow}:${deal.name}`, false])),
+      visibleDeals.flatMap((program) => program.deals.map((deal) => [`${program.eyebrow}:${deal.name}`, false])),
     ),
   )
+  const [collapsedPrograms, setCollapsedPrograms] = useState<Record<string, boolean>>({})
 
   const toggleCard = (key: string) => {
     setExpandedCards((current) => ({ ...current, [key]: !current[key] }))
+  }
+
+  const toggleProgram = (key: string) => {
+    setCollapsedPrograms((current) => ({ ...current, [key]: !current[key] }))
   }
 
   return (
     <section className="cm-section cm-hotdeals" id="hotdeals">
       <div className="cm-section-heading">
         <div className="cm-pill">Tối ưu chi phí đến 81%</div>
-        <h2>HOT DEALS</h2>
+        <h2>BEST OFFER PLANS</h2>
         <p>Các chương trình ưu đãi VPS và Cloud Server nổi bật, tối ưu chi phí cho từng nhu cầu triển khai.</p>
       </div>
-      {deals.map((program) => (
-        <div className="cm-deal-program" key={program.eyebrow}>
+      {visibleDeals.map((program) => {
+        const programKey = program.eyebrow
+        const isProgramCollapsed = collapsedPrograms[programKey] ?? false
+        const pricingGridId = `pricing-${programKey.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+
+        return (
+        <div className="cm-deal-program" key={programKey}>
           <div className="cm-program-intro">
             <ProgramIcon variant={program.iconVariant} />
             <div className="cm-program-copy">
-              <div className="cm-program-eyebrow">{program.eyebrow}</div>
-              <h3>{program.title}</h3>
+              <h3 className="cm-program-eyebrow">{program.eyebrow}</h3>
+              <p className="cm-program-subheadline">{program.title}</p>
+              <div className="cm-program-note">{PROGRAM_URGENCY_NOTE}</div>
               <p>{program.description}</p>
               <div className="cm-program-footer">
-                <div className="cm-program-note">{program.note}</div>
                 <ProgramCountdown countdown={countdown} />
+                <button
+                  aria-controls={pricingGridId}
+                  aria-expanded={!isProgramCollapsed}
+                  className="cm-program-pricing-toggle"
+                  onClick={() => toggleProgram(programKey)}
+                  type="button"
+                >
+                  {isProgramCollapsed ? 'Chi tiết ↓' : 'Thu gọn ↑'}
+                </button>
               </div>
             </div>
           </div>
-          <div className={`cm-deal-grid ${program.deals.length === 4 ? 'is-four' : ''}`}>
-            {program.deals.map((deal) => {
-              const dealKey = `${program.eyebrow}:${deal.name}`
+          {isProgramCollapsed ? null : (
+            <div className={`cm-deal-grid ${program.deals.length === 4 ? 'is-four' : ''}`} id={pricingGridId}>
+              {program.deals.map((deal) => {
+                const dealKey = `${program.eyebrow}:${deal.name}`
 
-              return (
-                <DealCard
-                  deal={deal}
-                  isExpanded={expandedCards[dealKey]}
-                  key={dealKey}
-                  onToggle={toggleCard}
-                  toggleKey={dealKey}
-                />
-              )
-            })}
-          </div>
+                return (
+                  <DealCard
+                    deal={deal}
+                    isExpanded={expandedCards[dealKey]}
+                    key={dealKey}
+                    onToggle={toggleCard}
+                    toggleKey={dealKey}
+                  />
+                )
+              })}
+            </div>
+          )}
         </div>
-      ))}
+        )
+      })}
     </section>
   )
 }

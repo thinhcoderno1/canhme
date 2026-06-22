@@ -5,7 +5,7 @@ export default function PressSection() {
   const loopCards = [...PRESS, ...PRESS]
 
   return (
-    <section style={{ background: '#fff', padding: '60px 0' }}>
+    <section className="id-press-section" style={{ background: '#fff', padding: '60px 0' }}>
       <style>{`
         @keyframes press-logo-scroll {
           from { transform: translateX(0); }

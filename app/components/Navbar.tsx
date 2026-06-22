@@ -117,7 +117,7 @@ export default function Navbar() {
           <Link className="id-navbar-brand" href="/" aria-label="InterData - Trang chủ">
             <Image
               className="id-navbar-logo"
-              src="/interdata-logo.png"
+              src="/interdata-logo-white.png"
               alt="InterData - Unlimited Connections"
               width={2048}
               height={713}

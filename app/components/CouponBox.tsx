@@ -25,9 +25,15 @@ export default function CouponBox({
           <div className={`cm-coupon-visual ${isCloud ? 'is-cloud' : ''}`} aria-hidden="true">
             <div className="cm-coupon-orb" />
             <div className="cm-mini-stack">
-              <span />
-              <span />
-              <span />
+              {[0, 1, 2].map((row) => (
+                <div className="cm-mini-server" key={row}>
+                  <span className="cm-mini-server-light" />
+                  <span className="cm-mini-server-light is-warm" />
+                  <span className="cm-mini-server-drive" />
+                  <span className="cm-mini-server-drive is-short" />
+                  <span className="cm-mini-server-vents" />
+                </div>
+              ))}
             </div>
             <strong>%</strong>
           </div>
