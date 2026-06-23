@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import CouponBox from './components/CouponBox'
+import AllServiceCoupons from './components/AllServiceCoupons'
 import FAQSection from './components/FAQSection'
 import FlashSale from './components/FlashSale'
 import Footer from './components/Footer'
@@ -10,6 +10,7 @@ import HotDeals from './components/HotDeals'
 import InfoSection from './components/InfoSection'
 import Navbar from './components/Navbar'
 import PressSection from './components/PressSection'
+import RenewalBonus from './components/RenewalBonus'
 import TestimonialsSection from './components/TestimonialsSection'
 import ZaloHotDealsSection from './components/ZaloHotDealsSection'
 import { useCountdown } from './components/useCountdown'
@@ -37,18 +38,8 @@ export default function Page() {
         <Hero />
         <HotDeals deals={deals} />
         <FlashSale countdown={countdown} copied={copied} onCopy={copyCode} />
-        <CouponBox
-          type="vps"
-          code="XXXXXX"
-          copied={copied === 'coupon-vps'}
-          onCopy={copyCode}
-        />
-        <CouponBox
-          type="cloud"
-          code="XXXXXX"
-          copied={copied === 'coupon-cloud'}
-          onCopy={copyCode}
-        />
+        <AllServiceCoupons copied={copied} onCopy={copyCode} />
+        <RenewalBonus />
         <ZaloHotDealsSection />
         <TestimonialsSection />
         <PressSection />

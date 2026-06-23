@@ -7,7 +7,7 @@ export default function ZaloHotDealsSection() {
           <div className="cm-pill">Zalo Hot Deals</div>
           <h2>Tham gia nhóm Zalo Hot Deals của InterData</h2>
           <p>
-            Quét mã QR bằng Zalo để theo dõi các chương trình VPS, Cloud Server và hot deals mới ngay khi được cập nhật.
+            Quét mã QR bằng Zalo để theo dõi các chương trình VPS, Cloud Server và Hot Deals mới ngay khi được cập nhật.
           </p>
           <a
             className="cm-zalo-button"

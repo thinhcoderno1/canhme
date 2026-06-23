@@ -1302,6 +1302,443 @@ button {
   font-weight: 800;
 }
 
+.cm-service-coupons-section {
+  padding-top: 34px;
+}
+
+.cm-service-coupons {
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  border: 1px solid rgba(0, 194, 255, 0.22);
+  border-radius: 22px;
+  background:
+    radial-gradient(640px 340px at 0% 0%, rgba(0, 194, 255, 0.24), transparent 62%),
+    radial-gradient(560px 320px at 100% 8%, rgba(255, 138, 42, 0.24), transparent 64%),
+    linear-gradient(135deg, #061638 0%, #08275c 52%, #07183f 100%);
+  color: #fff;
+  box-shadow: 0 26px 60px rgba(7, 24, 63, 0.28);
+}
+
+.cm-service-coupons::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 194, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px, 96px 96px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.cm-service-coupons-head,
+.cm-service-coupon-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.cm-service-coupons-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 28px;
+  align-items: center;
+}
+
+.cm-service-coupons-head h2 {
+  max-width: 760px;
+  margin: 16px 0 12px;
+  color: #fff;
+  font-size: clamp(30px, 4.4vw, 46px);
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.cm-service-coupons-head p {
+  max-width: 660px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.cm-service-coupons-badge {
+  justify-self: end;
+  width: 142px;
+  height: 142px;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 38% 28%, rgba(255, 255, 255, 0.62), transparent 28%),
+    linear-gradient(135deg, #ffd43b, #ff8a2a 54%, #ff4d2e);
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 20px 38px rgba(255, 116, 45, 0.3);
+  transform: rotate(5deg);
+}
+
+.cm-service-coupons-badge strong,
+.cm-service-coupons-badge span {
+  display: block;
+  line-height: 1;
+}
+
+.cm-service-coupons-badge strong {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.cm-service-coupons-badge span {
+  margin-top: -12px;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cm-service-coupon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.cm-service-coupon-card {
+  position: relative;
+  min-height: 100%;
+  padding: 26px 22px 22px;
+  overflow: hidden;
+  border: 1.5px dashed rgba(174, 233, 255, 0.42);
+  border-radius: 18px;
+  background:
+    radial-gradient(360px 220px at 100% 0%, rgba(0, 194, 255, 0.12), transparent 64%),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.cm-service-coupon-card.is-featured {
+  border-color: rgba(255, 212, 59, 0.72);
+  background:
+    radial-gradient(380px 240px at 100% 0%, rgba(255, 212, 59, 0.22), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 18px 36px rgba(255, 116, 45, 0.16);
+}
+
+.cm-service-coupon-ribbon {
+  position: absolute;
+  top: 16px;
+  right: -38px;
+  width: 160px;
+  padding: 6px 10px;
+  background: linear-gradient(135deg, #ffd43b, #ff8a2a);
+  color: #1d1832;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(35deg);
+}
+
+.cm-service-coupon-term {
+  color: #ffd43b;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cm-service-coupon-discount {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.cm-service-coupon-discount strong {
+  display: block;
+  margin-top: 3px;
+  color: #ffd43b;
+  font-size: clamp(44px, 6vw, 64px);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.cm-service-coupon-card p {
+  min-height: 46px;
+  margin: 14px 0 18px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.cm-service-coupon-code {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  padding: 13px 14px;
+  border: 1px solid rgba(255, 212, 59, 0.36);
+  border-radius: 12px;
+  background: rgba(3, 14, 42, 0.46);
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.cm-service-coupon-code:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 212, 59, 0.78);
+  background: rgba(3, 14, 42, 0.62);
+}
+
+.cm-service-coupon-code span,
+.cm-service-coupon-code small {
+  color: #ffcf67;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.cm-service-coupon-code strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.cm-service-coupons-note {
+  position: relative;
+  z-index: 1;
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 212, 59, 0.22);
+  border-radius: 12px;
+  background: rgba(3, 14, 42, 0.32);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.cm-renewal-section {
+  padding-top: 34px;
+}
+
+.cm-renewal-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 34px;
+  align-items: center;
+  overflow: hidden;
+  padding: 36px 40px;
+  border: 1px solid rgba(0, 194, 255, 0.22);
+  border-radius: 20px;
+  background:
+    radial-gradient(560px 300px at 8% 8%, rgba(0, 194, 255, 0.24), transparent 62%),
+    radial-gradient(520px 300px at 100% 0%, rgba(255, 138, 42, 0.18), transparent 64%),
+    linear-gradient(135deg, #061638 0%, #082348 54%, #07183f 100%);
+  color: #fff;
+  box-shadow: 0 24px 58px rgba(7, 24, 63, 0.24);
+}
+
+.cm-renewal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 194, 255, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px, 96px 96px;
+  opacity: 0.34;
+  pointer-events: none;
+}
+
+.cm-renewal-visual,
+.cm-renewal-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cm-renewal-visual {
+  min-height: 190px;
+  display: grid;
+  place-items: center;
+}
+
+.cm-renewal-visual::before {
+  content: '';
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 212, 59, 0.38), rgba(0, 194, 255, 0.2) 52%, transparent 72%);
+  filter: blur(1px);
+}
+
+.cm-renewal-calendar {
+  position: relative;
+  z-index: 2;
+  width: 132px;
+  height: 132px;
+  display: grid;
+  place-items: center;
+  padding-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #eaf4ff 100%);
+  color: #07183f;
+  box-shadow: 0 22px 38px rgba(0, 0, 0, 0.26);
+  transform: rotate(-4deg);
+}
+
+.cm-renewal-calendar::before,
+.cm-renewal-calendar::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  width: 18px;
+  height: 28px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ff8a2a, #ff4d2e);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.cm-renewal-calendar::before {
+  left: 28px;
+}
+
+.cm-renewal-calendar::after {
+  right: 28px;
+}
+
+.cm-renewal-calendar span {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  left: 16px;
+  height: 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0b63ff, #00c2ff);
+}
+
+.cm-renewal-calendar strong,
+.cm-renewal-calendar small {
+  display: block;
+  line-height: 1;
+}
+
+.cm-renewal-calendar strong {
+  margin-top: 20px;
+  color: #075bd9;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.cm-renewal-calendar small {
+  margin-top: -4px;
+  color: #ff5a2f;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.cm-renewal-server {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 3;
+  width: 112px;
+  height: 48px;
+  display: grid;
+  grid-template-columns: 10px 1fr 26px;
+  gap: 10px;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0b63ff, #00a6ff);
+  box-shadow: 0 18px 28px rgba(0, 117, 255, 0.3);
+}
+
+.cm-renewal-server i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #35e187;
+  box-shadow: 0 0 0 4px rgba(53, 225, 135, 0.18);
+}
+
+.cm-renewal-server span {
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.cm-renewal-server span:last-child {
+  background: rgba(255, 212, 59, 0.94);
+}
+
+.cm-renewal-content h2 {
+  max-width: 760px;
+  margin: 16px 0 12px;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.cm-renewal-content p {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.cm-renewal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.cm-renewal-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffd43b, #ff8a2a 58%, #ff4d2e);
+  color: #1d1832;
+  font-size: 14px;
+  font-weight: 900;
+  box-shadow: 0 14px 28px rgba(255, 116, 45, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cm-renewal-actions a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(255, 116, 45, 0.38);
+}
+
+.cm-renewal-actions span {
+  color: #aee9ff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .cm-benefits {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2426,6 +2863,8 @@ body {
 
   .cm-flash,
   .cm-coupon,
+  .cm-service-coupons,
+  .cm-renewal-card,
   .cm-program-intro {
     padding: 26px 20px;
   }
@@ -2454,6 +2893,38 @@ body {
   .cm-zalo-card {
     padding: 26px 20px;
     gap: 24px;
+  }
+
+  .cm-service-coupons-head,
+  .cm-service-coupon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cm-service-coupons-badge {
+    justify-self: start;
+    width: 116px;
+    height: 116px;
+  }
+
+  .cm-service-coupons-badge strong {
+    font-size: 34px;
+  }
+
+  .cm-service-coupon-card p {
+    min-height: 0;
+  }
+
+  .cm-renewal-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .cm-renewal-visual {
+    min-height: 170px;
+  }
+
+  .cm-renewal-actions a {
+    width: 100%;
   }
 
   .cm-zalo-section {

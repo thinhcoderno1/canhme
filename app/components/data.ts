@@ -741,7 +741,7 @@ export const FOOTER_POLICIES = [
 ]
 
 export const FOOTER_FAQ = [
-  { label: 'Hướng dẫn gửi tickets hỗ trợ', href: 'https://interdata.vn/blog/huong-dan-gui-yeu-cau-ho-tro-tai-interdata/' },
+  { label: 'Hướng dẫn gửi Tickets hỗ trợ', href: 'https://interdata.vn/blog/huong-dan-gui-yeu-cau-ho-tro-tai-interdata/' },
   { label: 'Hướng dẫn thay đổi thông tin tài khoản quản lý dịch vụ', href: 'https://interdata.vn/blog/thay-doi-thong-tin-quan-tri-interdata/' },
   { label: 'Hướng dẫn đăng ký Domain', href: 'https://interdata.vn/blog/huong-dan-dang-ky-ten-mien-tai-interdata/' },
 ]
