@@ -47,6 +47,72 @@ export type CustomerTestimonial = {
 
 export const deals: DealProgram[] = [
   {
+    eyebrow: 'BD CLOUD PERFORMANCE 2026',
+    title: 'Cloud Server hiệu năng cao - tiết kiệm đến 80%',
+    description:
+      'Nâng tầm hạ tầng doanh nghiệp với Cloud Server thế hệ mới - tiết kiệm lên đến 80% chi phí và bảo đảm an toàn dữ liệu tuyệt đối trên hệ thống CEPH Storage cao cấp.',
+    note: 'Chương trình có thể kết thúc sớm do số lượng ưu đãi có hạn.',
+    iconVariant: 'cloud',
+    deals: [
+      {
+        name: 'BD-CLOUD 1',
+        specs: [
+          'Gia hạn không đổi giá',
+          '2 vCPU',
+          '2 GB RAM',
+          '30 GB SSD NVMe',
+          '300 Mbps Network Port',
+          'Unlimited Bandwidth',
+          '1 IPv4 Private',
+        ],
+        price: '988.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-1',
+      },
+      {
+        name: 'BD-CLOUD 2',
+        specs: [
+          'Gia hạn không đổi giá',
+          '4 vCPU',
+          '8 GB RAM',
+          '80 GB SSD NVMe',
+          '300 Mbps Network Port',
+          'Unlimited Bandwidth',
+          '1 IPv4 Private',
+        ],
+        price: '2.988.000đ',
+        featured: true,
+        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-2',
+      },
+      {
+        name: 'BD-CLOUD 3',
+        specs: [
+          'Gia hạn không đổi giá',
+          '8 vCPU',
+          '16 GB RAM',
+          '140 GB SSD NVMe',
+          '400 Mbps Network Port',
+          'Unlimited Bandwidth',
+          '1 IPv4 Private',
+        ],
+        price: '5.999.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-3',
+      },
+      {
+        name: 'BD-CLOUD 4',
+        specs: [
+          'Gia hạn không đổi giá',
+          '16 vCPU',
+          '32 GB RAM',
+          '200 GB SSD NVMe',
+          '500 Mbps Network Port',
+          'Unlimited Bandwidth',
+        ],
+        price: '9.998.000đ',
+        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-4',
+      },
+    ],
+  },
+  {
     eyebrow: 'Cloud-Day by InterData 2026',
     title: 'AMD EPYC hiệu năng cao - tiết kiệm đến 81%',
     description:
