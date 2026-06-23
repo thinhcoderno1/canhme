@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
+import { withAssetPrefix } from '../lib/assetPrefix'
 
 type MenuItem = {
   label: string
@@ -115,13 +115,14 @@ export default function Navbar() {
       <nav className="id-navbar-main" aria-label="Điều hướng chính">
         <div className="id-navbar-container id-navbar-main-inner">
           <Link className="id-navbar-brand" href="/" aria-label="InterData - Trang chủ">
-            <Image
+            {/* Avoid next/image optimizer path issues when this page is served under /canhme. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               className="id-navbar-logo"
-              src="/interdata-logo-white.png"
+              src={withAssetPrefix('/interdata-logo-white.png')}
               alt="InterData - Unlimited Connections"
               width={2048}
               height={713}
-              priority
             />
           </Link>
 
