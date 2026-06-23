@@ -20,7 +20,7 @@ export default function RenewalBonus() {
           <h2>Gia hạn nhận đến 1 năm sử dụng</h2>
           <p>Liên hệ InterData để được hỗ trợ nhận ưu đãi khi gia hạn dịch vụ.</p>
           <div className="cm-renewal-actions">
-            <a href="https://facebook.com/interdata.com.vn" target="_blank" rel="nofollow noopener noreferrer">
+            <a href="tel:1900636822" target="_blank" rel="nofollow noopener noreferrer">
               NHẬN ƯU ĐÃI NGAY!
             </a>
             {/* <span>Áp dụng cho toàn bộ các gói dịch vụ</span> */}

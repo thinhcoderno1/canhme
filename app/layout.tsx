@@ -2,11 +2,13 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { deals, faqs } from './components/data'
 import { withAssetPrefix } from './lib/assetPrefix'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 const siteUrl = 'https://interdata.vn'
 const pagePath = '/canhme/'
 const pageUrl = `${siteUrl}${pagePath}`
-const ogImage = withAssetPrefix('/cloud-1022x800.png')
+const ogImage = "https://interdata.vn/assets/promotions/banner-birthday-2026.jpg"
 const favicon = withAssetPrefix('/icon.png')
 
 const title = 'Canh Me - Khuyến Mãi, Siêu Ưu Đãi VPS & Cloud Server'
@@ -220,8 +222,11 @@ export default function RootLayout({
             __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
           }}
         />
+        
       </head>
+
       <body>{children}</body>
+    <GoogleAnalytics gaId='G-BHY0XZSXPX' />
     </html>
   )
 }
