@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import { withAssetPrefix } from '../lib/assetPrefix'
+
 export default function ZaloHotDealsSection() {
   return (
     <section className="cm-section cm-zalo-section">
@@ -20,7 +22,7 @@ export default function ZaloHotDealsSection() {
         </div>
         <div className="cm-zalo-qr-wrap">
           <img
-            src="/qr-code-zalo-interdata.jpg"
+            src={withAssetPrefix('/qr-code-zalo-interdata.jpg')}
             alt="Mã QR tham gia nhóm Zalo Hot Deals của InterData"
             className="cm-zalo-qr"
           />

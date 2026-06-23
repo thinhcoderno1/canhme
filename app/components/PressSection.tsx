@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { PRESS } from './data'
+import { withAssetPrefix } from '../lib/assetPrefix'
 
 export default function PressSection() {
   const loopCards = [...PRESS, ...PRESS]
@@ -116,7 +117,7 @@ export default function PressSection() {
               <div style={{ position: 'relative', overflow: 'hidden', height: 215 }}>
                 <img
                   className="press-card-img"
-                  src={item.thumb}
+                  src={withAssetPrefix(item.thumb)}
                   alt={item.title}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
@@ -138,7 +139,7 @@ export default function PressSection() {
                     boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
                   }}
                 >
-                  <img src={item.partnerLogo} alt="logo" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+                  <img src={withAssetPrefix(item.partnerLogo)} alt="logo" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
                 </div>
               </div>
 

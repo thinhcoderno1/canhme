@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from 'react'
 import { TESTIMONIALS } from './data'
+import { withAssetPrefix } from '../lib/assetPrefix'
 
 const STAR_PATH =
   'M8 1l1.854 3.756L14 5.429l-3 2.923.708 4.127L8 10.354l-3.708 2.125L5 8.352 2 5.429l4.146-.673z'
@@ -154,7 +155,7 @@ export default function Testimonials() {
                         border: '1px solid #E9ECEF',
                       }}>
                         <img
-                          src={t.logo}
+                          src={withAssetPrefix(t.logo)}
                           alt={t.company}
                           style={{ maxHeight: 40, maxWidth: '100%', objectFit: 'contain' }}
                         />
