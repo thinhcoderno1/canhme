@@ -1,22 +1,17 @@
-export type Deal = {
-  name: string
-  specs: string[]
-  oldPrice?: string
-  price: string
-  period?: string
-  featured?: boolean
-  href?: string
-}
-
 export type DealProgram = {
+  gid: number
   eyebrow: string
   title: string
   description: string
   note: string
-  deals: Deal[]
   iconVariant?: 'cloud' | 'vps'
   hidden?: boolean
+  pricingPeriod?: 'monthly' | 'quarterly' | 'semiannually' | 'annually' | 'biennially' | 'triennially'
+  featuredIndex?: number
+  gridColumns?: 2 | 3 | 4
 }
+
+export const GID_ORDER = [96, 95, 93, 92, 89, 87] as const
 
 export type Testimonial = {
   name: string
@@ -47,457 +42,72 @@ export type CustomerTestimonial = {
 
 export const deals: DealProgram[] = [
   {
-    eyebrow: 'BD CLOUD PERFORMANCE 2026',
+    gid: 95,
+    featuredIndex: 1,
+    eyebrow: 'Cloud-Day by InterData 2026',
     title: 'Cloud Server hiệu năng cao - tiết kiệm đến 80%',
     description:
       'Nâng tầm hạ tầng doanh nghiệp với Cloud Server thế hệ mới - tiết kiệm lên đến 80% chi phí và bảo đảm an toàn dữ liệu tuyệt đối trên hệ thống CEPH Storage cao cấp.',
     note: 'Chương trình có thể kết thúc sớm do số lượng ưu đãi có hạn.',
     iconVariant: 'cloud',
-    deals: [
-      {
-        name: 'BD-CLOUD 1',
-        specs: [
-          'Gia hạn không đổi giá',
-          '2 vCPU',
-          '2 GB RAM',
-          '30 GB SSD NVMe',
-          '300 Mbps Network Port',
-          'Unlimited Bandwidth',
-          '1 IPv4 Private',
-        ],
-        price: '988.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-1',
-      },
-      {
-        name: 'BD-CLOUD 2',
-        specs: [
-          'Gia hạn không đổi giá',
-          '4 vCPU',
-          '8 GB RAM',
-          '80 GB SSD NVMe',
-          '300 Mbps Network Port',
-          'Unlimited Bandwidth',
-          '1 IPv4 Private',
-        ],
-        price: '2.988.000đ',
-        featured: true,
-        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-2',
-      },
-      {
-        name: 'BD-CLOUD 3',
-        specs: [
-          'Gia hạn không đổi giá',
-          '8 vCPU',
-          '16 GB RAM',
-          '140 GB SSD NVMe',
-          '400 Mbps Network Port',
-          'Unlimited Bandwidth',
-          '1 IPv4 Private',
-        ],
-        price: '5.999.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-3',
-      },
-      {
-        name: 'BD-CLOUD 4',
-        specs: [
-          'Gia hạn không đổi giá',
-          '16 vCPU',
-          '32 GB RAM',
-          '200 GB SSD NVMe',
-          '500 Mbps Network Port',
-          'Unlimited Bandwidth',
-        ],
-        price: '9.998.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/bd-cloud-performance-2026/bd-cloud-4',
-      },
-    ],
   },
   {
-    eyebrow: 'Cloud-Day by InterData 2026',
-    title: 'AMD EPYC hiệu năng cao - tiết kiệm đến 81%',
+    gid: 96,
+    pricingPeriod: 'monthly',
+    featuredIndex: 1,
+    gridColumns: 3,
+    eyebrow: 'INTER DEDI POWER SERIES 2026',
+    title: 'DEDICATED SERVER CẤU HÌNH CAO – TẶNG SERVER KHI ĐĂNG KÝ 3 NĂM',
     description:
-      'Sở hữu ngay hạ tầng AMD EPYC hiệu năng cao, tiết kiệm đến 81% chi phí. Đăng ký từ 2 năm trở lên được tặng 1 năm sử dụng và 500GB S3 Storage. Trang bị SSD NVMe U.2 Gen4 tốc độ cao, phù hợp cho website traffic lớn, ứng dụng doanh nghiệp và hệ thống cần tài nguyên ổn định.',
+      'Tối ưu hiệu năng với Dedicated Server cấu hình cao, băng thông lớn, Anti DDoS và hạ tầng Datacenter đạt chuẩn. Toàn bộ tài nguyên dành riêng cho doanh nghiệp của bạn.',
     note: 'Chương trình có thể kết thúc sớm do số lượng ưu đãi có hạn.',
     iconVariant: 'cloud',
-    deals: [
-      {
-        name: 'Cloud-Day - Base',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Tặng 80GB S3 và 1 năm sử dụng khi mua 2 năm trở lên',
-          '4 vCPU AMD G3',
-          '6GB RAM',
-          '60GB SSD NVMe U.2',
-          '10Gbps Network Port',
-          '1 IPv4 Private',
-          '2000GB băng thông',
-        ],
-        price: '2.666.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/cloud-day-by-interdata-2026/cloud-day-base',
-      },
-      {
-        name: 'Cloud-Day - Pro',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Tặng 200GB S3 và 1 năm sử dụng khi mua 2 năm trở lên',
-          '8 vCPU AMD G3',
-          '12GB RAM',
-          '160GB SSD NVMe U.2',
-          '10Gbps Network Port',
-          '1 IPv4 Private',
-          '5000GB băng thông',
-        ],
-        price: '5.666.000đ',
-        featured: true,
-        href: 'https://support.interdata.vn/index.php?rp=/store/cloud-day-by-interdata-2026/cloud-day-pro',
-      },
-      {
-        name: 'Cloud-Day - Ultra',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Tặng 500GB S3 và 1 năm sử dụng khi mua 2 năm trở lên',
-          '16 vCPU AMD G3',
-          '32GB RAM',
-          '480GB SSD NVMe U.2',
-          '10Gbps Network Port',
-          '1 IPv4 Private',
-          '18000GB băng thông',
-        ],
-        price: '14.666.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/cloud-day-by-interdata-2026/cloud-day-ultra',
-      },
-    ],
   },
-  // {
-  //   eyebrow: 'Best Plan VPS AMD',
-  //   title: 'Máy chủ AMD EPYC - sức mạnh cho mọi tác vụ',
-  //   description:
-  //     'Trang bị CPU AMD EPYC mạnh mẽ, lưu trữ NVMe U.2 Gen4 IOPS cao. Đáp ứng từ website traffic cao đến hệ thống doanh nghiệp yêu cầu hiệu năng ổn định. Hỗ trợ kỹ thuật 24/7 và hoàn tiền nếu không đúng cam kết.',
-  //   note: 'Chương trình có thể kết thúc sớm do số lượng ưu đãi có hạn.',
-  //   iconVariant: 'vps',
-  //   deals: [
-  //     {
-  //       name: 'AMD 7H Base',
-  //       specs: [
-  //         'Gia hạn không đổi giá',
-  //         '3 vCPU AMD 7H12',
-  //         '4GB RAM',
-  //         '30GB SSD NVMe U.2',
-  //         '300Mbps Network Port',
-  //         '1 IPv4 Private',
-  //         'Unlimited Bandwidth',
-  //       ],
-  //       price: '988.000đ',
-  //       href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-base',
-  //     },
-  //     {
-  //       name: 'AMD 7H Pro',
-  //       specs: [
-  //         'Gia hạn không đổi giá',
-  //         '8 vCPU AMD 7H12',
-  //         '8GB RAM',
-  //         '80GB SSD NVMe U.2',
-  //         '300Mbps Network Port',
-  //         '1 IPv4 Private',
-  //         'Unlimited Bandwidth',
-  //       ],
-  //       price: '2.688.000đ',
-  //       featured: true,
-  //       href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-pro',
-  //     },
-  //     {
-  //       name: 'AMD 7H Ultra',
-  //       specs: [
-  //         'Gia hạn không đổi giá',
-  //         '12 vCPU AMD 7H12',
-  //         '24GB RAM',
-  //         '140GB SSD NVMe U.2',
-  //         '400Mbps Network Port',
-  //         '1 IPv4 Private',
-  //         'Unlimited Bandwidth',
-  //       ],
-  //       price: '5.199.000đ',
-  //       href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-ultra',
-  //     },
-  //     {
-  //       name: 'AMD 7H Turbo',
-  //       specs: [
-  //         'Gia hạn không đổi giá',
-  //         '16 vCPU AMD 7H12',
-  //         '32GB RAM',
-  //         '200GB SSD NVMe U.2',
-  //         '500Mbps Network Port',
-  //         '1 IPv4 Private',
-  //         'Unlimited Bandwidth',
-  //       ],
-  //       price: '9.998.000đ',
-  //       href: 'https://support.interdata.vn/index.php?rp=/store/best-plan-vps-amd-2026/amd-7h-turbo',
-  //     },
-  //   ],
-  // },
   {
-    eyebrow: 'InterData Day - VPS AMD hiệu năng cao',
+    gid: 92,
     hidden: true,
+    featuredIndex: 3,
+    eyebrow: 'InterData Day - VPS AMD hiệu năng cao',
     title: 'Hạ tầng mạnh mẽ - vận hành tự tin',
     description:
       'Tăng tốc website, app và hệ thống trực tuyến với giải pháp VPS AMD dùng CPU AMD 7H12 mạnh mẽ, SSD NVMe U.2 siêu tốc độ, cùng dung lượng băng thông không giới hạn. Cấu hình đa dạng từ cơ bản đến doanh nghiệp với mức chi phí tối ưu, phù hợp cho nhu cầu vận hành liên tục, xử lý đa tác vụ và mở rộng tài nguyên linh hoạt khi cần.',
     note: 'Ưu đãi áp dụng từ 25/05 đến 31/05/2026. Sau thời gian này, giá sẽ được điều chỉnh tăng 20%.',
     iconVariant: 'vps',
-    deals: [
-      {
-        name: 'BD - Starter',
-        specs: [
-          'Gia hạn không đổi giá',
-          '1 vCPU Intel Xeon E5-2690 v4',
-          '2GB RAM',
-          '20GB NVMe U.2',
-          '100Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '699.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-starter',
-      },
-      {
-        name: 'BD - Personal',
-        specs: [
-          'Gia hạn không đổi giá',
-          '2 vCPU AMD 7H12',
-          '4GB RAM',
-          '40GB SSD NVMe U.2',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '1.456.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-personal',
-      },
-      {
-        name: 'BD - Builder',
-        specs: [
-          'Gia hạn không đổi giá',
-          '4 vCPU AMD 7H12',
-          '8GB RAM',
-          '80GB SSD NVMe U.2',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '2.999.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-builder',
-      },
-      {
-        name: 'BD - Business',
-        specs: [
-          'Gia hạn không đổi giá',
-          '6 vCPU AMD 7H12',
-          '12GB RAM',
-          '100GB SSD NVMe U.2',
-          '500Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '4.599.000đ',
-        featured: true,
-        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-business',
-      },
-      {
-        name: 'BD - Enterprise 1',
-        specs: [
-          'Gia hạn không đổi giá',
-          '8 vCPU AMD 7H12',
-          '16GB RAM',
-          '120GB SSD NVMe U.2',
-          '500Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '6.336.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-enterprise-1',
-      },
-      {
-        name: 'BD - Enterprise 2',
-        specs: [
-          'Gia hạn không đổi giá',
-          '16 vCPU AMD 7H12',
-          '32GB RAM',
-          '160GB SSD NVMe U.2',
-          '1Gbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '13.456.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/interdata-day-2026/bd-enterprise-2',
-      },
-    ],
   },
   {
-    eyebrow: 'Victory Month 2026 - VPS AMD hiệu năng cao',
+    gid: 93,
     hidden: true,
+    featuredIndex: 1,
+    eyebrow: 'Victory Month 2026 - VPS AMD hiệu năng cao',
     title: 'Mừng lễ Độc Lập - ưu đãi tràn ngập',
     description:
       'Giải pháp VPS AMD với CPU AMD EPYC 7H12, SSD NVMe Gen4, băng thông không giới hạn. Hạ tầng ổn định, tốc độ cao, vận hành mượt mà các workload như web app, database, container hay automation. Gia hạn giữ nguyên giá, cân bằng tốt giữa chi phí và hiệu suất.',
     note: 'Chỉ diễn ra: 15/04/2026 - 17/04/2026. Sẽ kết thúc sớm khi hết thời gian hoặc hết số lượng ưu đãi, tùy điều kiện nào đến trước.',
     iconVariant: 'cloud',
-    deals: [
-      {
-        name: 'Victory AMD 1',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Mở bán từ ngày 15/04/2026',
-          '3 vCPU AMD 7H12',
-          '4GB RAM',
-          '51GB SSD NVMe G4 R10',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '1.567.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/victory-month-2026/victory-amd-1',
-      },
-      {
-        name: 'Victory AMD 2',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Mở bán từ ngày 15/04/2026',
-          '4 vCPU AMD 7H12',
-          '8GB RAM',
-          '80GB SSD NVMe G4 R10',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '2.888.000đ',
-        featured: true,
-        href: 'https://support.interdata.vn/index.php?rp=/store/victory-month-2026/victory-amd-2',
-      },
-      {
-        name: 'Victory AMD 3',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Mở bán từ ngày 15/04/2026',
-          '8 vCPU AMD 7H12',
-          '12GB RAM',
-          '100GB SSD NVMe G4 R10',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '4.666.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/victory-month-2026/victory-amd-3',
-      },
-    ],
   },
   {
+    gid: 89,
+    pricingPeriod: 'quarterly',
     eyebrow: 'VPS/Cloud Server - Best Value Plans',
     title: 'Hiệu năng vượt trội - tiết kiệm đến 60%',
     description:
       'Giải pháp VPS / Cloud Server cân bằng giữa hiệu năng và chi phí, phù hợp cho doanh nghiệp và cá nhân triển khai hệ thống linh hoạt. Dễ dàng vận hành các ứng dụng như Docker, n8n, OpenClaw, SQL, PHP hay .NET. Hạ tầng ổn định, tốc độ cao, hỗ trợ 24/7 giúp yên tâm mở rộng dự án và tối ưu hiệu suất lâu dài.',
     note: 'Chương trình có thể kết thúc sớm, do số lượng ưu đãi có hạn.',
     iconVariant: 'cloud',
-    deals: [
-      {
-        name: 'Premium Base',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Mở bán từ ngày 06/04/2026',
-          '2 vCore Intel Xeon Scalable',
-          '2GB RAM',
-          '30GB SSD NVMe',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '299.000đ',
-        period: '/3 tháng',
-        href: 'https://support.interdata.vn/index.php?rp=/store/best-value-plans-2026/best-value-plans-premium-base',
-      },
-      {
-        name: 'Premium Pro',
-        specs: [
-          'Gia hạn không đổi giá',
-          'Mở bán từ ngày 06/04/2026',
-          '4 vCore Intel Xeon Scalable',
-          '8GB RAM',
-          '80GB SSD NVMe',
-          '350Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth',
-        ],
-        price: '899.000đ',
-        period: '/3 tháng',
-        href: 'https://support.interdata.vn/index.php?rp=/store/best-value-plans-2026/premium-pro-1',
-      },
-    ],
   },
   {
+    gid: 87,
+    featuredIndex: 1,
     eyebrow: 'VPS Hiệu Năng Cao Cho Developer & Business',
     title: 'Hiệu năng vượt trội - tối ưu chi phí',
     description:
       'Các gói VPS Premium chạy trên CPU Intel Xeon Scalable mạnh mẽ ổn định, SSD NVMe U.2 tốc độ cao, IPv4 riêng, băng thông không giới hạn và full root access. Hỗ trợ Linux & Windows, tự động khởi tạo ngay sau khi thanh toán, phù hợp cho developer, startup và doanh nghiệp cần triển khai web server, phần mềm doanh nghiệp hoặc tools tùy chỉnh.',
     note: 'Chương trình có thể kết thúc sớm, do số lượng ưu đãi có hạn.',
     iconVariant: 'vps',
-    deals: [
-      {
-        name: 'Premium Base',
-        specs: [
-          'Gia hạn không đổi giá',
-          '3 vCore Intel Xeon Scalable',
-          '3GB RAM',
-          '30GB SSD NVMe',
-          '300Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth Monthly',
-        ],
-        price: '999.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-base',
-      },
-      {
-        name: 'Premium Pro',
-        specs: [
-          'Gia hạn không đổi giá',
-          '6 vCore Intel Xeon Scalable',
-          '8GB RAM',
-          '80GB SSD NVMe',
-          '350Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth Monthly',
-        ],
-        price: '2.599.000đ',
-        featured: true,
-        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-pro',
-      },
-      {
-        name: 'Premium Ultra',
-        specs: [
-          'Gia hạn không đổi giá',
-          '12 vCore Intel Xeon Scalable',
-          '16GB RAM',
-          '180GB SSD NVMe',
-          '450Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth Monthly',
-        ],
-        price: '5.679.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-ultra',
-      },
-      {
-        name: 'Premium Turbo',
-        specs: [
-          'Gia hạn không đổi giá',
-          '16 vCore Intel Xeon Scalable',
-          '32GB RAM',
-          '240GB SSD NVMe',
-          '600Mbps Network Port',
-          '1 IPv4 Private',
-          'Unlimited Bandwidth Monthly',
-        ],
-        price: '11.899.000đ',
-        href: 'https://support.interdata.vn/index.php?rp=/store/cyber-week-2026/premium-turbo',
-      },
-    ],
   },
 ]
+
+
 
 export const testimonials: Testimonial[] = [
   {

@@ -1,53 +1,40 @@
-'use client'
-
-import { useState } from 'react'
-import AllServiceCoupons from './components/AllServiceCoupons'
-import FAQSection from './components/FAQSection'
-import FlashSale from './components/FlashSale'
+import FAQClient from './components/FAQClient'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import HotDeals from './components/HotDeals'
 import InfoSection from './components/InfoSection'
 import Navbar from './components/Navbar'
+import PageInteractive from './components/PageInteractive'
 import PressSection from './components/PressSection'
 import RenewalBonus from './components/RenewalBonus'
 import TestimonialsSection from './components/TestimonialsSection'
 import ZaloHotDealsSection from './components/ZaloHotDealsSection'
-import { useCountdown } from './components/useCountdown'
-import { deals, faqs } from './components/data'
+import { deals, GID_ORDER, type DealProgram } from './components/data'
+import { fetchAllGroupPricing } from './lib/packages'
 
-export default function Page() {
-  const countdown = useCountdown()
-  const [copied, setCopied] = useState<string | null>(null)
-  const [openFaq, setOpenFaq] = useState<Record<number, boolean>>({})
+export default async function Page() {
+  const visibleGids = GID_ORDER.filter((gid) => {
+    const program = deals.find((p) => p.gid === gid)
+    return program && !program.hidden
+  })
+  const pricingByGid = await fetchAllGroupPricing(visibleGids)
 
-  const copyCode = async (code: string, copiedKey = code) => {
-    try {
-      await navigator.clipboard?.writeText(code)
-    } catch {}
-    setCopied(copiedKey)
-    window.setTimeout(() => setCopied(null), 5000)
-  }
-
-  const toggleFaq = (index: number) => setOpenFaq((current) => ({ ...current, [index]: !current[index] }))
+  const orderedDeals = GID_ORDER.map((gid) => deals.find((p) => p.gid === gid)).filter(
+    (p): p is DealProgram => p !== undefined,
+  )
 
   return (
     <>
       <Navbar />
       <main className="cm-page">
         <Hero />
-        <HotDeals deals={deals} />
-        <FlashSale countdown={countdown} copied={copied} onCopy={copyCode} />
-        <AllServiceCoupons copied={copied} onCopy={copyCode} />
+        <HotDeals deals={orderedDeals} pricingByGid={pricingByGid} />
+        <PageInteractive />
         <RenewalBonus />
         <ZaloHotDealsSection />
         <TestimonialsSection />
         <PressSection />
-        <FAQSection
-          items={faqs}
-          openFaq={openFaq}
-          onToggle={toggleFaq}
-        />
+        <FAQClient />
         <InfoSection />
       </main>
       <Footer />

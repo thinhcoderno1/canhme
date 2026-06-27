@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { deals, faqs } from './components/data'
+import { faqs } from './components/data'
 import { withAssetPrefix } from './lib/assetPrefix'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
@@ -103,29 +103,6 @@ export const viewport: Viewport = {
   colorScheme: 'light dark',
 }
 
-/** '988.000đ' -> '988000' ; '2.988.000đ' -> '2988000' */
-const toAmount = (price: string) => price.replace(/[^\d]/g, '')
-
-// Chỉ lấy các chương trình đang hiển thị (hidden = đã kết thúc) để markup khớp nội dung thật.
-const activeDeals = deals.filter((program) => !program.hidden)
-
-const productItems = activeDeals.flatMap((program) =>
-  program.deals.map((deal) => ({
-    '@type': 'Product' as const,
-    name: `${program.eyebrow} - ${deal.name}`,
-    description: deal.specs.join(', '),
-    brand: { '@type': 'Brand', name: 'InterData' },
-    category: program.iconVariant === 'vps' ? 'VPS' : 'Cloud Server',
-    offers: {
-      '@type': 'Offer',
-      url: deal.href ?? pageUrl,
-      price: toAmount(deal.price),
-      priceCurrency: 'VND',
-      availability: 'https://schema.org/InStock',
-      seller: { '@id': `${siteUrl}/#organization` },
-    },
-  }))
-)
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -179,17 +156,6 @@ const structuredData = {
         { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: siteUrl },
         { '@type': 'ListItem', position: 2, name: 'Canh Me', item: pageUrl },
       ],
-    },
-    {
-      '@type': 'ItemList',
-      '@id': `${pageUrl}#deals`,
-      name: 'Danh sách ưu đãi VPS & Cloud Server - Canh Me InterData',
-      numberOfItems: productItems.length,
-      itemListElement: productItems.map((product, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: product,
-      })),
     },
     {
       '@type': 'FAQPage',
